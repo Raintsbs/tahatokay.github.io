@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanada Kültürü</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #dc0c0c;
+            position: relative;
+            height: 140px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding: 20px 80px;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: normal;
+            position: relative;
+            padding-right: 35px;
+        }
+        .maple-leaf {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #ff0000;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 5px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f8ff;
+            margin-top: 20px;
+        }
+        .desc {
+            font-size: 19px;
+            float: left;
+            width: 60%;
+            margin-right: 20px;
+        }
+        .img {
+            float: right;
+            width: 30%;
+        }
+        .clear {
+            clear: both;
+        }
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            background-color: #ff0000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        #scrollTopBtn:hover {
+            background-color: #cc0000;
+            box-shadow: 0 6px 8px rgba(0,0,0,0.4);
+        }
+        #scrollTopBtn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kanada'ya Hoş Geldiniz<span class="maple-leaf">🍁</span></h1>
+    </header>
+    
+    <nav>
+        <a href="code (1).html">Genel Bilgiler</a> 
+        <a href="tarih.html">Tarihçe</a>
+        <a href="#">Kültür</a>
+        <a href="mutfak.html">Mutfak</a>
+        <a href="turizm.html">Turizm</a>
+        <a href="coğrafya.html">Coğrafya</a>
+        <a href="ekonomi.html">Ekonomi</a>
+        <a href="spor.html">Spor</a>
+    </nav>
+    
+    <main>
+        <section id="dil">
+            <h2>Ülkenin Dili ve Bilgisi</h2>
+            <div class="img" style="width: 250px;" >
+                <img src="images/kanada-dilleri.png" alt="Kanada Dilleri Haritası">
+            </div>
+            <div class="desc">
+                <p>Kanada'nın resmi dilleri İngilizce ve Fransızcadır. İngilizce, ülkenin çoğunda konuşulur ve nüfusun yaklaşık %58'i ana dili olarak kullanır. Fransızca ise Quebec eyaletinde baskındır ve nüfusun %22'si tarafından konuşulur. Ülke çok dilli bir yapıya sahip olup, yerli halk dilleri (örneğin İnuitçe) ve göçmen dilleri (Çince, İtalyanca) de yaygındır. Eğitim ve hükümet işlemleri her iki dilde yapılır.</p>
+                <p><strong>• İnuitçe (veya İnuktitut)</strong>, Kanada'nın kuzey bölgelerinde (Nunavut, Nunavik, Nunatsiavut) ve Grönland'da İnuit halkı tarafından konuşulan bir Eskimo-Aleut dilidir.</p>
+                <p><strong>• Özellikler:</strong><br><br>
+
+                   <strong>• Yazı Sistemi:</strong> Hem hece yazısı (syllabics) hem de Latin alfabesi kullanılır<br>
+
+                   <strong>• Lehçeler:</strong> Kanada'da Inuktitut, Inuinnaqtun, Inuvialuktun gibi lehçeleri var<br>
+
+                   <strong>• Konuşucu Sayısı:</strong> Kanada'da ~40.000 kişi anadil olarak konuşuyor</p>
+            </div>
+            <div class="clear"></div>
+        </section>
+        
+        <section id="bayramlar" style="">
+            <h2>Geleneksel Bayramları</h2>
+            <p style="font-size: 17px;">Kanada'da çeşitli bayramlar kutlanır, çoğu Hristiyan kökenli ama çok kültürlü bir yaklaşımla:</p>
+            <ul>
+                <li style="font-size: 17px;"><strong style="font-size: 18px;">Canada Day (Kanada Günü):</strong> 1 Temmuz'da bağımsızlık günü olarak kutlanır. Ateşler, piknikler ve festivaller yapılır.</li>
+                <li style="font-size: 17px;"><strong style="font-size: 18px;">Thanksgiving (Şükran Günü):</strong>Ekim ayında, hasat şükranı için kutlanır. Hindili yemekler ve aile toplantıları yaygındır.</li>
+                <li style="font-size: 17px;"><strong style="font-size: 18px;">Christmas (Noel):</strong> 25 Aralık'ta ailelerle geçirilir, hediyeler ve süslemeler ile.</li>
+                <li style="font-size: 17px;"><strong style="font-size: 18px;">Victoria Day:</strong> Mayıs ayında Kraliçe Victoria'nın doğum günü olarak kutlanır, bahar bayramı gibi.</li>
+                <li style="font-size: 17px;"><strong style="font-size: 18px;">Yerli Halk Bayramları:</strong> Örneğin National Aboriginal Day (21 Haziran), yerli kültürleri kutlar.</li>
+            </ul>
+        </section>
+        
+        <section id="gelenekler">
+            <h2>Gelenekleri ve Görenekleri</h2>
+            <div class="img" style="width: 300px; padding-top: 30px;" >
+                <img src="images/kanada-buz-hokeyi.jpeg" alt="Kanada Buz Hokeyi">
+            </div>
+            <div class="desc">
+                <p>Kanada, çok kültürlü bir ülke olarak çeşitli geleneklere sahip. Buz hokeyi ulusal spor olup, kış aylarında ailelerle oynanır. Akçaağaç şurubu üretimi geleneksel bir görenek, özellikle Quebec'te. Yerli halkların (İlk Milletler, İnuit) gelenekleri güçlü; dans, şarkı ve doğa ile bağ kurma ritüelleri var. Göçmen kültürlerinden dolayı Çin Yeni Yılı veya Diwali gibi festivaller de kutlanır. Sosyal göreneklerde, "Eh" kelimesi samimi bir ifade olarak kullanılır. Misafirperverlik ve doğa sevgisi öne çıkar.</p>
+            </div>
+            <div class="clear"></div>
+        </section>
+        
+        <section id="kilik-kiyafet">
+            <h2>Kılık Kıyafeti</h2>
+            <p style="font-size: 17px;">Kanada'da günlük kıyafet Batı tarzı (jean, tişört, mont), ama kışın kalın giysiler (parkalar, botlar) zorunlu. Geleneksel kıyafetler yerli halklardan gelir:</p>
+            <ul>
+                <li style="font-size: 17px;"><strong style="font-size: 18px;">Yerli Halk Kıyafetleri:</strong> İnuitler için amauti (bebek taşıyan parkalar), İlk Milletler için deri elbiseler ve tüy süslemeler.</li>
+                <li style="font-size: 17px;"><strong style="font-size: 18px;">Resmi Durumlarda:</strong> İş veya törenlerde takım elbise veya etek giyilir.</li>
+                <li style="font-size: 17px;"><strong style="font-size: 18px;">Kültürel Etkinliklerde:</strong> Bayramlarda renkli, geleneksel desenli kıyafetler tercih edilir.</li>
+            </ul><div style="display: flex;" >
+            <img src="images/inuit-kıyafeti.jpeg" alt="İnuit Geleneksel Kıyafeti">
+            <img src="images/amauti.jpeg" alt="İlk Milletler Geleneksel Kıyafeti">
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Kanada Tanıtım</p>
+    </footer>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑ Yukarı</button>
+
+    <script>
+        window.onscroll = function() {
+            const btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</body>
+</html>

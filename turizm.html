@@ -1,0 +1,631 @@
+ <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <title>Kanada Turizm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #dc0c0c;
+            position: relative;
+            height: 140px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding: 20px 80px;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: normal;
+            position: relative;
+            padding-right: 35px;
+        }
+        .maple-leaf {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #ff0000;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 5px;
+        }
+
+        .turizm-card {
+            height: 510px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .turizm-baslik{
+            color: #c41e3a;
+            margin-bottom: 12px;
+            font-size: 22px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+        .turizm-card .media-left{
+            height: 428px;
+            float: left;
+            margin: 0 20px 10px 0;
+            width: 750px;
+            max-width: 45%;
+            display: block;
+            border-radius: 5px;
+            
+        }
+        .turizm-card2 {
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .turizm-card2 .media-left{
+            height: 520px;
+            float: left;
+            margin: 0 20px 10px 0;
+            width: 750px;
+            max-width: 45%;
+            display: block;
+            border-radius: 5px;
+            
+        }
+
+        .turizm-card3 {
+            height: 800px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .turizm-card3 .media-left{
+            height: 700px;
+            float: left;
+            margin: 0 20px 10px 0;
+            width: 750px;
+            max-width: 45%;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .tarihi-eser{
+            height: 280px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .tarihi-eser-baslik{
+            color: #c41e3a;
+            margin-bottom: 12px;
+            font-size: 22px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+        .tarihi-eser .t-img{
+            height: 230px;
+            float: left;
+            margin: 0 20px 10px 0;
+            width: 750px;
+            max-width: 45%;
+            display: block;
+            border-radius: 5px;
+        }
+        .müze{
+            height: 367px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .müze .t-img{
+            height: 310px;
+            float: left;
+            margin: 0 20px 10px 0;
+            width: 750px;
+            max-width: 45%;
+            display: block;
+            border-radius: 5px;
+        }
+        .Doğal-Güzellikler{
+            height: 440px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .Doğal-Güzellikler .d-img{
+            height: 370px;
+            float: left;
+            margin: 0 20px 10px 0;
+            width: 750px;
+            max-width: 45%;
+            display: block;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            color: #000;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #0056b3;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+            font-weight: bold;
+            width: 30%; 
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f8ff;
+            margin-top: 20px;
+        }
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            background-color: #ff0000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        #scrollTopBtn:hover {
+            background-color: #cc0000;
+            box-shadow: 0 6px 8px rgba(0,0,0,0.4);
+        }
+        #scrollTopBtn:active {
+            transform: scale(0.95);
+        }
+        
+
+ 
+ </style>
+</head>
+<body>
+    <header>
+        <h1>Kanada'ya Hoş Geldiniz <span class="maple-leaf">🍁</span></h1>
+    </header>
+    
+    <nav>
+        <a href="code (1).html">Genel Bilgiler</a>
+        <a href="tarih.html">Tarihçe</a>
+        <a href="Kültür.html">Kültür</a>
+        <a href="mutfak.html">Mutfak</a>
+        <a href="#">Turizm</a>
+        <a href="coğrafya.html">Coğrafya</a>
+        <a href="ekonomi.html">Ekonomi</a>
+        <a href="spor.html">Spor</a>
+    </nav>
+
+    
+    <main>
+        <section id="turizm">
+            <h2>Turizm</h2>
+
+            <div class="turizm-card">   
+                 <div class="turizm-baslik">Niagara Şelaleleri (Niagara Falls)</div>
+                 <img class="media-left" alt="Niagara Şelaleleri" src="images/Niagara-Şelaleleri.jpeg">
+                 <p style="font-size: 20px; ;">• Kanada ile ABD sınırında yer alan bu doğa harikası, üç büyük şelaleden oluşur: Atnalı Şelalesi (Horseshoe Falls), Amerikan Şelalesi (American Falls) ve Gelin Duvağı Şelalesi (Bridal Veil Falls).<br><br>
+                    <strong>• Konum:</strong> Ontario (Kanada tarafı) ve New York (ABD tarafı) eyaletleri sınırı.<br><br>
+                    <strong>• Özellikler:</strong> Atnalı Şelalesi, üç şelale arasında en büyüğü ve en görkemlisidir. Kanada tarafından tam bir hilal şeklinde en iyi şekilde izlenir.<br><br>
+                    <strong>• Aktiviteler:</strong> Şelalelerin döküldüğü noktaya kadar giden Hornblower Niagara Cruises (eski adıyla Maid of the Mist) tekne turları, şelaleleri tepeden izlemek için Skylon Kulesi ve şelalelerin arkasından manzarayı deneyimleme imkanı sunan Journey Behind the Falls en popüler aktivitelerdendir.<br><br>
+                    <strong>• Önem:</strong> Şelaleler, bölgenin enerji ihtiyacının bir kısmını karşılayan hidroelektrik santralleri için de hayati öneme sahiptir.
+            </p>
+            </div>
+            <div class="turizm-card">
+                <div class="turizm-baslik">Banff Ulusal Parkı (Banff National Park)</div>
+                <img class="media-left" alt="Banff Ulusal Parkı" src="images/Banff-Ulusal-Parkı.jpeg">
+                <p style="font-size: 20px;">• Kanada'nın en eski ulusal parkı (1885) olan Banff, UNESCO Dünya Mirası Listesi'nde yer alan, Kanada Kayalık Dağları'nın kalbinde bulunan bir doğa cennetidir.<br><br>
+                    <strong>• Konum:</strong> Alberta Eyaleti.<br><br>
+                    <strong>• Özellikler:</strong> Buzul sularıyla beslenen, eşsiz turkuaz renge sahip gölleri (özellikle Moraine Gölü ve Lake Louise), heybetli dağ zirveleri, geniş ormanları ve zengin vahşi yaşamı (ayılar, geyikler vb.) ile ünlüdür.<br><br>
+                    <strong>• Aktiviteler:</strong> Yazın yürüyüş, kışın kayak ve snowboard gibi sporlar için idealdir. Banff Gondola ile Sulphur Dağı'nın zirvesinden panoramik manzarayı izleyebilir veya Bow Valley boyunca kamp yapabilirsiniz. Moraine Gölü çevresindeki On Zirve Vadisi (Valley of the Ten Peaks) bölgenin en çok fotoğraflanan noktasıdır.
+                </p>
+            </div>
+            <div class="turizm-card2">
+                <div class="turizm-baslik">CN Kulesi (CN Tower)</div>
+                <img class="media-left" alt="CN Kulesi" src="images/CN-Kulesi.jpeg">
+                <p style="font-size: 20px;">Toronto silüetinin en belirgin simgesi ve modern mühendisliğin bir harikası olan CN Kulesi, bir zamanlar dünyanın en yüksek kulesi unvanına sahipti.<br><br>
+                    <strong>• Konum:</strong> Toronto, Ontario<br><br>
+                    <strong>• Yükseklik:</strong> 553 metre<br><br>
+                    <strong>• Özellikler:</strong> Kule, ilk olarak iletişim (radyo ve televizyon) yayınlarının iletilmesi amacıyla inşa edilmiştir. Şehrin her yerinden görülebilen bir simgedir.<br><br>
+                    <strong>• Aktiviteler: Gözlem Katları (LookOut ve Glass Floor): </strong> Şehrin ve Ontario Gölü'nün 360 derecelik panoramik manzarasını sunan katlardır. Özellikle cam zemin (Glass Floor), ziyaretçilerin ayaklarının altında 346 metrelik boşluğu hissetmelerini sağlar.<br><br>
+                    <strong>• 360 Dönen Restoran:</strong> Yerden 351 metre yükseklikte bulunan, yavaşça dönerek yemek yerken Toronto'nun manzarasını izleme imkanı sunan lüks bir restorandır.<br><br>
+                    <strong>• EdgeWalk:</strong> Macera arayanlar için kulenin ana bölmesinin dış kenarında, 356 metre yükseklikte yürüyüş yapma deneyimidir.
+                </p>
+            </div>
+            <div class="turizm-card2">
+                <div class="turizm-baslik">Eski Quebec Şehri (Vieux-Québec)</div>
+                <img class="media-left" alt="Eski Quebec Şehri" src="images/Eski-Quebec-Şehri.jpeg">
+                <p style="font-size: 20px;">Kuzey Amerika'da Meksika'nın kuzeyinde halen surlarla çevrili olan tek şehir unvanına sahip olan Eski Quebec, adeta bir Avrupa şehrini andıran tarihi dokusuyla ünlüdür. 1985 yılından beri UNESCO Dünya Kültür Mirası Listesi'nde yer almaktadır.<br><br>
+                    <strong>• Konum:</strong> Quebec Eyaleti'nin başkenti<br><br>
+                    <strong>• Özellikler:</strong> Şehir, tarihi surlarla çevrilidir ve iki ana bölüme ayrılır: Yukarı Şehir (Haute-Ville) ve Aşağı Şehir (Basse-Ville). Arnavut kaldırımlı sokakları, taş binaları ve Fransız kültürü etkisindeki atmosferiyle dikkat çeker.<br><br>
+                    <strong>• Simge Yapı:</strong> Şehrin silüetine hakim olan ve dünyanın en çok fotoğraflanan otellerinden biri olarak bilinen görkemli Fairmont Le Château Frontenac Oteli'dir.<br><br>
+                    <strong>• Aktiviteler:</strong> Aşağı Şehir'de yer alan ve şehrin en eski ticaret caddesi olan şirin Quartier Petit Champlain bölgesini gezmek, Dufferin Terası'ndan St. Lawrence Nehri manzarasını izlemek ve 4.5 km uzunluğundaki tarihi surların üzerinde yürüyüş yapmak başlıca aktivitelerdendir.
+                </p>
+            </div>
+            <div class="turizm-card3">
+                <div class="turizm-baslik">Stanley Park</div>
+                <img  class="media-left" alt="Stanley Park" src="images/Stanley-Park.jpeg">
+                <p style="font-size: 20px;">Stanley Park, Vancouver şehir merkezinin hemen yanı başında, 405 hektarlık devasa bir alana yayılan, ormanlık bir yarımadadır ve şehir sakinleri ile turistler için bir nefes alma merkezidir. Park, 1888 yılında açılmıştır ve adını Kanada'nın o dönemki Genel Valisi Lord Stanley'den almıştır.<br><br>
+                    <strong>• Konum:</strong> British Columbia eyaletinin Vancouver şehrinde, şehir merkezinin hemen yanı başında yer alan bir yarımada.<br><br>
+                    <strong>• Özellikler:</strong> 405 hektarlık devasa bir alana yayılmıştır. Parkın büyük bir kısmı, Batı Kırmızı Sedir ve Douglas Göknarı ağaçlarıyla dolu, korunmuş doğal yağmur ormanı alanıdır.<br><br>
+                    <strong>• Aktiviteler:</strong> Seawall (Deniz Duvarı): Parkı çevreleyen 9 kilometrelik popüler yürüyüş ve bisiklet yolu boyunca okyanus ve dağ manzarası eşliğinde gezinti yapmak. (Bisikletler saat yönünün tersine gitmelidir.)<br><br>
+                    <strong>• Totem Dirsekleri:</strong> Parkın en çok ziyaret edilen noktalarından biri olan Brockton Point'te, Yerli Halklar'ın (First Nations) sanatını sergileyen görkemli Totem Direkleri'ni görmek.<br><br>
+                    <strong>• Prospect Point:</strong> Lions Gate Köprüsü ve North Shore Dağları'nın panoramik manzarasını izlemek.<br><br>
+                    <strong>• Önem:</strong> Kuzey Amerika'nın en büyük ve en güzel şehir parklarından biri olarak kabul edilir ve Vancouver'ın "yeşil akciğeri" rolünü üstlenir.<br><br>
+                    <strong>• Ek Bilgiler:</strong> Parkın içinde, Kanada'nın en büyük akvaryumlarından biri olan Vancouver Akvaryumu yer alır.
+                </p>
+            </div>
+            <div class="turizm-card3">
+                <div class="turizm-baslik">Icefields Parkway (Buzul Tarlaları Yolu)</div>
+                <img class="media-left" alt="Icefields Parkway" src="images/Icefields-Parkway.jpeg">
+                <p style="font-size: 20px;">Icefields Parkway (93 numaralı otoyol), Banff Ulusal Parkı'nı Jasper Ulusal Parkı'na bağlayan ve Kanada Kayalık Dağları'nın en görkemli manzaralarını sunan 232 kilometrelik bir rotadır.<br><br>
+                    <strong>• Konum:</strong> Alberta eyaleti, Banff Ulusal Parkı ile Jasper Ulusal Parkı'nı birbirine bağlayan 232 kilometrelik manzaralı otoyol (93 numaralı yol).<br><br>
+                    <strong>• Özellikler:</strong> Buzul gölleri, karlı zirveler, şelaleler ve geniş buzul tarlalarının bulunduğu bir rotadır. Yol boyunca sıkça yabani hayvanlarla karşılaşılabilir.<br><br>
+                    <strong>• Aktiviteler:</strong> Athabasca Buzulu: Ice Explorers adı verilen özel otobüslerle bu devasa buzulun üzerine çıkmak.<br><br>
+                    <strong>• Columbia Icefield Skywalk:</strong> Sunwapta Vadisi'nin üzerine inşa edilmiş cam zeminli gözlem platformundan manzarayı deneyimlemek.<br><br>
+                    <strong>• Sunwapta ve Athabasca Şelaleleri:</strong> Güçlü akıntıları ve derin kanyonları ile ünlü, kolayca erişilebilir noktalardır.<br><br>
+                    <strong>• Peyto Gölü</strong> Tilki kafasına benzeyen şekli ve parlak turkuaz rengiyle ünlü olan bu buzul gölünün manzarasını seyretmek.<br><br>
+                    <strong>• Önem:</strong> Dünyanın en güzel manzaralı sürüş rotalarından biri olarak kabul edilir ve UNESCO Dünya Mirası Alanı olan Kanada Kayalık Dağları'nın çekirdeğini oluşturur.<br><br>
+                    <strong>• Ek Bilgiler:</strong> Rota üzerindeki hizmet noktaları (benzin ve yiyecek) oldukça sınırlıdır. Kış aylarında zorlu hava şartları nedeniyle özel kış lastikleri zorunludur.<br><br>
+                </p>
+            </div>
+            <h2>Kanada: Turizm Verileri</h2>
+
+    <h3>Kanada Turizm Verileri (Son Yıl: 2025)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Kategori</th>
+                <th>Veri (2025)</th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Toplam Turizm Geliri (CAD)</td>
+                <td>$124.4 Milyar</td>
+                <td>Yerel ve uluslararası harcamalar dahil toplam gelir.</td>
+            </tr>
+            <tr>
+                <td>Uluslararası Ziyaretçi Harcaması</td>
+                <td>$28.9 Milyar</td>
+                <td>Pandemi öncesi rekoru aşan uluslararası harcama.</td>
+            </tr>
+            <tr>
+                <td>Uluslararası Ziyaretçi Sayısı</td>
+                <td>27.2 Milyon Gezi</td>
+                <td>Kanadalı olmayan ziyaretçilerin toplam gezi sayısı.</td>
+            </tr>
+            <tr>
+                <td>Başlıca Ziyaretçi Pazarı</td>
+                <td>Amerika Birleşik Devletleri</td>
+                <td>En büyük ziyaretçi kaynağı.</td>
+            </tr>
+            <tr>
+                <td>En Çok Ziyaret Edilen Eyalet</td>
+                <td>Ontario</td>
+                <td>Uluslararası ve yerel ziyaretçilerin en çok tercih ettiği bölge.</td>
+            </tr>
+        </tbody>
+    </table>
+             <h2>Tarihi Eserler Ve  Unesco Dünya Mirası </h2>
+            <div class="tarihi-eser">
+                <div class="tarihi-eser-baslik">Parlamento Tepesi (Parliament Hill)</div>
+                <img class="t-img" alt="Parlamento Tepesi" src="images/Parlamento-Tepesi.jpeg">
+                <p style="font-size: 20px;">Kanada'nın başkenti Ottawa'da, Ottawa Nehri'ne bakan bir tepede yer alan, Kanada federal hükümetinin ve ulusal yasama organının (Parlamento) bulunduğu görkemli yapılar kompleksidir.<br><br>
+                    <strong>• Mimari ve Rolü:</strong> Büyük ölçüde 19. yüzyılda inşa edilen yapılar, Gotik Yeniden Doğuş (Gothic Revival) mimarisinin çarpıcı örnekleridir. Ülkenin siyasi ve sembolik kalbidir. Her yıl milyonlarca turisti çeken, resmi törenlere ve etkinliklere ev sahipliği yapan önemli bir ulusal simgedir.
+                </p>
+            </div>
+            <div class="tarihi-eser">
+                <div class="tarihi-eser-baslik">Rideau Kanalı</div>
+                <img class="t-img" alt="Rideau Kanalı" src="images/Rideau-Kanalı.jpg">
+                <p style="font-size: 20px;">Ottawa'yı Kingston'a bağlayan, yapımı 1832'de tamamlanmış tarihi bir kanal sistemidir. Kanada'nın İngiliz-Amerikan Savaşı sonrası savunma amaçlı inşa ettiği önemli bir mühendislik eseridir.<br><br>
+                    <strong>• Önemi:</strong> UNESCO Dünya Mirası Alanı olarak kabul edilir ve Kuzey Amerika'da orijinal rotasında ve işlevselliğiyle kesintisiz olarak kullanılan en eski kanal sistemidir. Kış aylarında, kanalın Ottawa kısmı dünyanın en büyük doğal buz pateni pisti olan Skateway'e dönüşür.
+                </p>
+            </div>
+            <div class="tarihi-eser">
+                <div class="tarihi-eser-baslik">L'Anse aux Meadows</div>
+                <img class="t-img" alt="L'Anse aux Meadows" src="images/L'Anse-aux-Meadows.jpg">
+                <p style="font-size: 20px;">Newfoundland ve Labrador eyaletinde bulunan bu arkeolojik alan, Avrupa kökenli bir yerleşimin Kuzey Amerika'daki bilinen en eski kanıtıdır.<br><br>
+                    <strong>• Tarihi Önemi:</strong> Yapılan araştırmalar, buradaki yerleşimin MS 1000 yılına, yani Kristof Kolomb'dan yaklaşık 500 yıl öncesine ait olduğunu göstermiştir. Bu, Vikinglerin (İskandinavların) Amerika kıtasına ilk ayak basan Avrupalılar olduğunu kanıtlayan kesin bir bulgudur. Bu nedenle burası da bir UNESCO Dünya Mirası Alanı'dır.
+                </p>
+            </div>
+            <h2>Müzeler</h2>
+             <div class="müze">
+                <div class="tarihi-eser-baslik">Royal Tyrrell Müzesi</div>
+                <img class="t-img" alt="Royal Tyrrell Müzesi" src="images/Royal-Tyrrell-Müzesi.jpg">
+                <p style="font-size: 20px;">Alberta eyaletindeki Drumheller'da bulunan ve doğrudan bir tarihi eser olmaktan çok, dünyanın en zengin fosil koleksiyonlarından birine sahip bir doğa tarihi müzesidir.<br><br>
+                    <strong>• Önemi:</strong> Müze, özellikle Dinozorlar Çağı'na ait fosil ve iskeletleriyle ünlüdür. Alberta'nın Dinozor Eyalet Parkı (Dinosaur Provincial Park - UNESCO) bölgesinden çıkarılan, tarihi ve bilimsel açıdan paha biçilmez buluntulara ev sahipliği yaparak Kanada'nın Paleontoloji alanındaki yerini vurgular. Bu müze, dünyaca ünlü fosil yatağı olan Alberta'daki Horseshoe Canyon (At Nalı Kanyonu) ve Badlands (Kötü Topraklar) bölgesinin kalbinde yer alır. Coğrafi konumu sayesinde müze, sergilenen eserlerin (özellikle dinozor iskeletleri) çıkarıldığı alanlara oldukça yakındır.
+                </p>
+            </div>
+             <div class="müze">
+                <div class="tarihi-eser-baslik">Kanada Tarihi Müzesi (Canadian Museum of History)</div>
+                <img class="t-img" alt="Kanada Tarihi Müzesi" src="images/Kanada-Tarihi-Müzesi.jpg">
+                <p style="font-size: 20px;"> Kanada'nın en çok ziyaret edilen müzesidir ve Ottawa Nehri'nin karşısında, Gatineau, Québec'te yer alır. Odak noktası, ülkenin insanlık tarihi, kültürel çeşitliliği ve medeniyet mirasıdır. Özellikle Yerli Halklar (First Peoples) koleksiyonuna adanmış görkemli galerileriyle ve çarpıcı modern mimarisiyle ünlüdür.<br><br>
+                    <strong>• Konum:</strong> Gatineau, Québec (Ottawa nehrinin hemen karşısında).<br><br>
+                    <strong>• Odak Alanı:</strong> Kanada'nın insanlık tarihi ve kültürel çeşitliliğine odaklanır. Ülkenin en çok ziyaret edilen müzesidir.<br><br>
+                    <strong>• Öne Çıkanlar:</strong> Özellikle Yerli Halklar (First Peoples) kültürüne adanmış galerileri ve Kanada tarihini kronolojik olarak anlatan büyük salonu ile ünlüdür.<br><br>
+                </p>
+            </div>
+             <div class="müze">
+                <div class="tarihi-eser-baslik">Royal Ontario Müzesi (Royal Ontario Museum - ROM)</div>
+                <img class="t-img" alt="Royal Ontario Müzesi (Royal Ontario Museum - ROM)" src="images/Royal-Ontario-Müzesi.jpeg">
+                <p style="font-size: 20px;"> Royal Ontario Müzesi (ROM), Toronto, Ontario'da yer alan ve Kanada'nın en büyük müzesi olan önemli bir kültür ve araştırma kurumudur. Müze, hem doğal tarih (dinozorlar, mineraller) hem de dünya kültürleri (Antik Mısır, Doğu Asya sanatı) üzerine geniş ve çeşitli koleksiyonlarıyla ünlüdür. Şehrin önde gelen kültürel simgelerinden biridir.<br><br>
+                    <strong>• Konum:</strong> Toronto, Ontario.<br><br>
+                    <strong>• Odak Alanı:</strong> Doğal tarih ve dünya kültürleri. Kanada'nın en büyük müzesidir.<br><br>
+                    <strong>• Öne Çıkanlar:</strong> Dinozor iskeletleri, eski Mısır eserleri, Doğu Asya sanatı ve geniş doğal bilimler koleksiyonları ile tanınır.<br><br>
+                </p>
+            </div>
+            <h2>Doğal Güzellikler</h2>
+            <div class="Doğal-Güzellikler">
+                <div class="tarihi-eser-baslik">Lake Louise</div>
+                <img class="d-img" alt="Lake Louise" src="images/Lake-Louise.jpg">
+                <p style="font-size: 20px;"> Göl, çevresindeki Victoria Buzulu'ndan eriyen suların taşıdığı ince mineraller (kaya unu) sayesinde yıl boyunca kendine has parlak turkuaz rengiyle ünlüdür. Karla kaplı dağlarla çevrili bu göl, Kanada'nın en çok fotoğrafı çekilen doğal simgelerinden biridir ve kıyısında tarihi Fairmont Chateau Lake Louise oteli bulunur. <br><br>
+                    <strong>• Detay:</strong> Alberta'daki Banff Ulusal Parkı içinde yer alan bu buzul gölü, kendine özgü turkuaz rengini, çevresindeki buzulların erimesiyle suya karışan "kaya unu" adı verilen ince minerallerden alır.<br><br>
+                    <strong>• Aktiviteler:</strong> Yaz aylarında kanoyla gezinti yapmak, göl kenarındaki tarihi Fairmont Chateau Lake Louise otelini ziyaret etmek ve gölü çevreleyen patikalarda (örneğin Plain of Six Glaciers çay evine giden rota) yürüyüş yapmak popülerdir.<br><br>
+                    <strong>• Sembolik Değer:</strong> Kanada Kayalık Dağları'nın ve kartpostalların en tanınan simgelerinden biridir.<br><br>
+                </p>
+            </div>
+            <div class="Doğal-Güzellikler">
+                <div class="tarihi-eser-baslik">Jasper Ulusal Parkı</div>
+                <img class="d-img" alt="Jasper Ulusal Parkı" src="images/Jasper-Ulusal-Parkı.jpg">
+                <p style="font-size: 20px;">Jasper Ulusal Parkı, Kanada'nın Alberta eyaletindeki Kanada Kayalık Dağları'nda yer alan ve UNESCO Dünya Mirası Alanı statüsüne sahip devasa bir doğa koruma bölgesidir.<br><br>
+                    <strong>• Detay:</strong> Kanada Kayalık Dağları'ndaki parklar zincirinin en büyüğüdür ve UNESCO Dünya Mirası Alanı'dır. Banff'ın kuzeyinde yer alır. Daha az kalabalık ve daha vahşi bir deneyim sunar.<br><br>
+                    <strong>• Öne Çıkanlar:</strong> Maligne Gölü ve Kanyonu: Göl, kışın donan ve altında bir yeraltı nehri akışı olan gizemli bir göldür. Kanyon ise yazın ve kışın nefes kesici manzaralar sunar.
+                      Athabasca Şelalesi: Büyük bir güçle dar bir kanyondan dökülen şelaledir.<br><br>
+                    <strong>• Vahşi Yaşam:</strong> Park, büyük boynuzlu koyunlar, geyikler, ayılar ve dağ keçileri gibi zengin vahşi yaşam popülasyonlarına ev sahipliği yapar.<br><br>
+                </p>
+            </div>
+             <div class="Doğal-Güzellikler">
+                <div class="tarihi-eser-baslik">Fundy Körfezi</div>
+                <img class="d-img" alt="Fundy Körfezi" src="images/Fundy-Körfezi.jpg">
+                <p style="font-size: 20px;"> Fundy Körfezi, Kanada'nın New Brunswick ve Nova Scotia eyaletleri arasında yer alır ve dünyanın en yüksek gelgit aralığına sahip olmasıyla uluslararası üne sahiptir.<br><br>
+                    <strong>• Detay:</strong> New Brunswick ve Nova Scotia eyaletleri arasında yer alan bu körfez, dünyanın en yüksek gelgit aralığına sahip olmasıyla ünlüdür.<br><br>
+                    <strong>• Fenomen:</strong> Gelgit sırasında su seviyesi, bazı bölgelerde 16 metreyi (4-5 katlı bir bina yüksekliği) aşarak birkaç saat içinde inanılmaz bir kıyı şeridi değişimi yaratır.<br><br>
+                      <strong>• Aktiviteler:</strong> Hopewell Kayaları (Flowerpot Rocks): Gelgit çekildiğinde, çiçek saksısına benzeyen bu eşsiz kaya oluşumlarının etrafında yürüyebilirsiniz. Gelgit sırasında yükselen suda yapılan tekne turları ve deniz kenarında yürüyüşler.<br><br>
+                    
+                </p>
+            </div>
+
+            <table>
+        <caption>Türkiye Cumhuriyeti Vatandaşları İçin Kanada Vize Bilgileri</caption>
+        <thead>
+            <tr>
+                <th>Kategori</th>
+                <th>Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Vize Zorunluluğu</th>
+                <td>Türkiye Cumhuriyeti vatandaşları için (Pasaport türü fark etmeksizin) <strong>zorunludur</strong>.</td>
+            </tr>
+            <tr>
+                <th>Vize Türü</th>
+                <td>Kısa süreli turistik, ticari veya ziyaret amaçlı seyahatler için genellikle <strong>Ziyaretçi Vizesi (Temporary Resident Visa - TRV)</strong> gereklidir.</td>
+            </tr>
+            <tr>
+                <th>eTA Durumu</th>
+                <td>Türk vatandaşları, vize muafiyeti sağlayan Elektronik Seyahat İzni (eTA) uygulamasından <strong>yararlanamaz</strong>.</td>
+            </tr>
+            <tr>
+                <th>Başvuru Yöntemi</th>
+                <td>Çoğunlukla <strong>online (IRCC portalı)</strong> üzerinden başlatılır ve yetkili Vize Başvuru Merkezlerinde biyometrik işlemlerle tamamlanır.</td>
+            </tr>
+            <tr>
+                <th>Temel Şartlar</th>
+                <td>Kanada'dan ayrılma niyetini ve seyahat masraflarını karşılayacak <strong>finansal yeterliliği</strong> kanıtlama zorunluluğu.</td>
+            </tr>
+            <tr>
+                <th>Ortalama İşlem Süresi</th>
+                <td>Dönemsel yoğunluğa göre değişmekle birlikte, ortalama <strong>6 ila 8 hafta</strong> sürebilmektedir.</td>
+            </tr>
+            <tr>
+                <th>Başvuru Ücreti (Temel)</th>
+                <td>Vize ücreti yaklaşık <strong>100 CAD</strong> (Kanada Doları) olup, buna biyometrik ücreti eklenir.</td>
+            </tr>
+            
+        </tbody>
+        
+    </table>
+<img style="border-radius: 5px;" alt="Kanada Vize" src="images/kanada-vize.jpg">
+<img  style="float: right; height: 470px; width: 550px; border-radius: 5px;" alt="Kanada Vize Başvuru" src="images/Kanada-vize-başvuru.png">
+    <h2>✈️ Kanada Ulaşım Bilgileri</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Ulaşım Türü</th>
+                <th>Açıklama</th>
+                <th>Önemli Merkezler / Notlar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Havayolu (Uluslararası/Yurtiçi)</th>
+                <td>Kanada'nın uzun mesafeleri için en hızlı ulaşım şeklidir.</td>
+                <td><strong>Ana Hublar:</strong> Toronto (YYZ), Vancouver (YVR), Montréal (YUL). Yurtiçinde Air Canada ve WestJet kullanılır.</td>
+            </tr>
+            <tr>
+                <th>Demiryolu (VIA Rail)</th>
+                <td>Şehirlerarası seyahatler ve turistik, manzaralı uzun yolculuklar (Örn: The Canadian rotası) için kullanılır.</td>
+                <td>Otobüs ve uçuştan daha yavaş ancak daha konforlu ve manzaralıdır.</td>
+            </tr>
+            <tr>
+                <th>Karayolu (Araba Kiralama)</th>
+                <td>Rocky Dağları ve kırsal alanlar gibi doğal güzellikleri keşfetmek için vazgeçilmezdir.</td>
+                <td>Uzun mesafeler ve değişken yol şartları (özellikle kışın) dikkate alınmalıdır.</td>
+            </tr>
+            <tr>
+                <th>Şehiriçi Toplu Taşıma</th>
+                <td>Büyük şehirlerde (Toronto, Vancouver, Montréal) gelişmiş metro, otobüs ve tramvay ağları mevcuttur.</td>
+                <td>Şehir merkezlerinde araç kullanmaya pratik ve hızlı bir alternatiftir.</td>
+            </tr>
+        </tbody>
+    </table>
+    <img style="height: 470px; width: 580px; border-radius: 5px;" alt="Kanada Tramvay" src="images/Kanada-tramvay.jpeg">
+    <img style="float: right; height: 470px; width: 580px; border-radius: 5px;" alt="Kanada Tren" src="images/Kanada-tren.jpeg">
+    <h2>📅 Kanada Seyahat Planlaması (En İdeal Ziyaret Zamanı)</h2>
+    <table>
+        <caption>Seyahat Amacına Göre En İyi Mevsimler</caption>
+        <thead>
+            <tr>
+                <th>Mevsim / Dönem</th>
+                <th>Aylar</th>
+                <th>Önerilen Aktiviteler / Bölgeler</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Yaz (Yüksek Sezon)</th>
+                <td>Haziran - Ağustos</td>
+                <td>Doğa Parkları (Banff, Jasper), Göller, Kanoyla Gezinti, Kıyı Şeridi Gezileri.</td>
+            </tr>
+            <tr>
+                <th>Sonbahar (En İdeal Kültürel Dönem)</th>
+                <td>Eylül - Ekim</td>
+                <td>Québec ve Ontario'da <strong>Yaprak Dökümü (Fall Foliage)</strong> manzaraları, şehir gezileri.</td>
+            </tr>
+            <tr>
+                <th>Bahar</th>
+                <td>Nisan - Mayıs</td>
+                <td>Büyük şehirler (Toronto, Vancouver) için gezmek, müzeleri ziyaret etmek. Doğanın yeni canlandığı dönem.</td>
+            </tr>
+            <tr>
+                <th>Kış</th>
+                <td>Kasım - Nisan</td>
+                <td>Kayak ve Kış Sporları (Rocky Dağları, Laurentian Dağları), Ottawa'da buz pateni.</td>
+            </tr>
+        </tbody>
+    </table>
+<img style="height: 470px; width: 580px; border-radius: 5px;" src="images/Kanada-kış.jpg" alt="Kanada Kış">
+<img style="float: right; height: 470px; width: 580px; border-radius: 5px;" src="images/Kanada-sonbahar.jpg" alt="Kanada Sonbahar">
+
+</main>
+
+             <footer>
+        <p>&copy; 2025 - Kanada Tanıtım</p>
+    </footer>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑ Yukarı</button>
+
+    <script>
+        window.onscroll = function() {
+            const btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+</body>
+</html>

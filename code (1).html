@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; 
+            color: #333;
+        }
+        header {
+            background-color: #dc0c0c;
+            position: relative;
+            height: 140px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding: 20px 80px;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: normal;
+            position: relative;
+            padding-right: 35px;
+        }
+        .maple-leaf {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #ff0000;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 5px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f8ff;
+            margin-top: 20px;
+        }
+        .flag-desc, .map-desc {
+            float: left;
+            width: 60%;
+            margin-right: 20px;
+        }
+        .flag-img, .map-img {
+            float: right;
+            width: 30%;
+        }
+        .clear {
+            clear: both;
+        }
+        .resim {
+            width:  400px;
+        }
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            background-color: #ff0000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        #scrollTopBtn:hover {
+            background-color: #cc0000;
+            box-shadow: 0 6px 8px rgba(0,0,0,0.4);
+        }
+        #scrollTopBtn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kanada'ya Hoş Geldiniz <span class="maple-leaf">🍁</span></h1>
+    </header>
+    
+    <nav>
+        <a href="#">Genel Bilgiler</a>
+        <a href="tarih.html">Tarihçe</a>
+        <a href="Kültür.html">Kültür</a>
+        <a href="mutfak.html">Mutfak</a>
+        <a href="turizm.html">Turizm</a>
+        <a href="coğrafya.html">Coğrafya</a>
+        <a href="ekonomi.html">Ekonomi</a>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Kanada Bayrağı</h2>
+            <div class="flag-img">
+                <img style="width: 400px;" src="images/kanada-bayrak.png" alt="Kanada Bayrağı">
+            </div>
+            <div class="flag-desc" style="font-size: 19px;">
+                <p>Kanada bayrağı, kırmızı bir akçaağaç yaprağının beyaz bir kare zemin üzerinde ve her iki yanında kırmızı dikey şeritler bulunan tasarımıdır. Resmi olarak "Akçaağaç Yapraklı Bayrak" olarak bilinir ve 15 Şubat 1965'te kabul edilmiştir.
+                  Kanada bayrağı, ülkenin ulusal sembollerinden biri haline gelmiş ve dünya çapında tanınan bir tasarıma sahiptir. Bayrak, Kanada'nın doğal güzelliklerini ve kültürel mirasını temsil eder.
+                  Kanada bayrağının tarihi, ülkenin bağımsızlık süreciyle yakından ilişkilidir. 1965 öncesinde Kanada, Birleşik Krallık'ın sömürgesi olması nedeniyle farklı bayraklar kullanmıştır
+                </p>
+
+            </div>
+            <div class="clear"></div>
+        </section>
+        
+        <section id="harita">
+            <h2>Kanada Haritası</h2>
+            
+            
+        </section>
+        
+        <section id="baskent">
+            <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; align-items: start;">
+                <div style="font-size: 19px;">
+                    <p>Kanada'nın tek kara komşusu ABD'dir. Bu, dünyanın en uzun savunmasız sınırıdır ve inanılmaz derecede yoğun bir ticari ve kültürel ilişkiye sahne olur. Bunun dışında, deniz yoluyla üç komşusu daha vardır:</p>
+                    <p style="font-size: 19px;">
+                        <b>• Danimarka (Grönland):</b> Kanada'nın kuzeydoğusunda yer alır. Yıllar süren şaka dolu bir "Viski Savaşı"nın ardından, aralarındaki tartışmalı Hans Adası'nı 2022'de paylaştılar.<br><br>
+                        <b>• Fransa (Saint Pierre ve Miquelon):</b> Kanada'nın doğu kıyısında, Newfoundland açıklarındaki küçük bir Fransız takımadasıdır. Kuzey Amerika'daki son Fransız toprağıdır.<br><br>
+                        <b>• Rusya:</b> Erimekte olan buzullar ve bölgedeki enerji kaynakları nedeniği bu komşuluk stratejik bir önem taşır.
+                    </p>
+                </div>
+                <div>
+                    <img src="images/kanada-harita.jpeg" alt="Kanada Haritası" style="width: 100%; height: auto; border-radius: 8px;">
+                </div>
+            </div>
+            
+            <h2 style="color: #ff0000; text-align: center; margin-top: 30px;">Başkent</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 20px; align-items: start; margin-top: 20px;">
+                <div>
+                    <img src="images/Ottawa.jpg" alt="Ottawa Şehri" style="width: 100%; height: auto; border-radius: 8px;">
+                </div>
+                <div style="font-size: 19px;">
+                    <h3 style="color: #ff0000; margin-top: 0;">Ottawa</h3>
+                    <p><b>Ottawa</b>, Kanada'nın başkenti ve dördüncü büyük şehridir. Ontario eyaletinin doğusunda, Ottawa Nehri'nin güney kıyısında ve Québec eyaleti sınırına yakın bir konumda yer alır. Şehir, aynı zamanda Ottawa Vadisi olarak bilinen bölgenin de merkezidir.</p>
+                    <p><strong>Önemli Not:</strong> Ottawa, Kanada'nın federal hükümetine ev sahipliği yapar, ancak Ontario eyaletinin başkenti değildir. Ontario'nun başkenti Toronto'dur.</p>
+                    <p><b>• Neden Başkent?:</b> 1857'de Kraliçe Victoria, Ottawa'yı o dönemki Kanada Eyaleti'nin (Ontario ve Québec) başkenti olarak seçti. Bu stratejik bir karardı; çünkü Ottawa, o zamanlar rakip olan Anglofon (İngilizce konuşan) "Upper Canada" (şimdiki Ontario) ve Frankofon (Fransızca konuşan) "Lower Canada" (şimdiki Québec) bölgeleri arasında bir sınır şehriydi.</p>
+                </div>
+            </div>
+        </section>
+        <section id="nufus">
+            <h2>Nüfus</h2>
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: center;">
+  <caption style="font-weight: bold; font-size: 18px; margin-bottom: 10px;">
+    Kanada 2025 Nüfus Verileri
+  </caption>
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th>Dönem</th>
+      <th>Tahmini Nüfus</th>
+      <th>Değişim (Kişi)</th>
+      <th>Büyüme Oranı</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 Ocak – 1 Nisan 2025</td>
+      <td>41,548,787</td>
+      <td>+20,107</td>
+      <td>+0.05 %</td>
+    </tr>
+    <tr>
+      <td>1 Temmuz 2025</td>
+      <td>41,651,653</td>
+      <td>+47,098</td>
+      <td>~+0.1 %</td>
+    </tr>
+  </tbody>
+</table>
+            <p style="font-size: 19px;">Kanada, 41.5 milyonu aşan nüfusu ile dünyanın en büyük 38. ülkesidir. Nüfusun büyük çoğunluğu ülkenin güney kesiminde, Amerika Birleşik Devletleri sınırına yakın bölgelerde yaşamaktadır.
+              Kanada, G7 ülkeleri arasında en hızlı nüfus artışına sahip ülkedir. Bu büyümenin büyük kısmı uluslararası göçten kaynaklanmaktadır.
+              Kanada'nın nüfusu son yıllarda rekor düzeyde büyümektedir. 2023 yılında ülke nüfusu 1.2 milyondan fazla kişi artış göstermiştir.
+            </p>
+        </section>
+
+         <section id="yuz olcumu">
+            <h2>Yüz Ölçümü</h2>
+            <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: center;">
+  <caption style="font-weight: bold; font-size: 18px; margin-bottom: 10px;">
+    Kanada 2025 Yüzölçümü Bilgileri
+  </caption>
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th>Kategori</th>
+      <th>Alan (km²)</th>
+      <th>Açıklama</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Toplam Yüzölçümü</strong></td>
+      <td><strong>9.984.670</strong></td>
+      <td>Kanada, dünyanın en büyük <strong>2. ülkesi</strong> (Rusya’dan sonra).</td>
+    </tr>
+    <tr>
+      <td>Kara Alanı</td>
+      <td>9.093.510</td>
+      <td>Okyanus, göl ve nehirler hariç kara parçası.</td>
+    </tr>
+    <tr>
+      <td>İç Sular (Göller, Nehirler vb.)</td>
+      <td>891.163</td>
+      <td>Dünyadaki en fazla tatlı su gölüne sahip ülke.</td>
+    </tr>
+    <tr>
+      <td>Kıyı Uzunluğu</td>
+      <td>≈ 202.080</td>
+      <td>Dünyanın en uzun kıyı şeridine sahip ülkesi.</td>
+    </tr>
+  </tbody>
+</table>
+            <div style="font-size: 19px;">
+                <p>Kanada, 9.98 milyon kilometrekarelik yüzölçümü ile Rusya'dan sonra dünyanın en büyük ikinci ülkesidir. Bu alan, dünyadaki toplam kara alanının yaklaşık %6.7'sine denk gelmektedir.
+                Kanada'nın toplam alanı, dünyanın en büyük 10 ülkesinden 7'sinin toplam alanından daha büyüktür. Ülkenin batı-doğu genişliği 5,514 km, kuzey-güney uzunluğu ise 4,634 km'dir.
+                Kanada'nın yüzölçümü, diğer büyük ülkelerle karşılaştırıldığında ne kadar geniş bir alana yayıldığını daha iyi anlamamızı sağlar.
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Kanada Tanıtım</p>
+    </footer>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑ Yukarı</button>
+
+    <script>
+        window.onscroll = function() {
+            const btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</body>
+</html>

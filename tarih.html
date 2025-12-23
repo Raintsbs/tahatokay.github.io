@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanada Tarihçesi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #dc0c0c;
+            position: relative;
+            height: 140px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding: 20px 80px;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: normal;
+            position: relative;
+            padding-right: 35px;
+        }
+        .maple-leaf {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #ff0000;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 5px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f8ff;
+            margin-top: 20px;
+        }
+        .tarih-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .savas-baslik {
+            color: #c41e3a;
+            margin-bottom: 12px;
+            font-size: 22px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+        .savas-icerik {
+            display: flex;
+            gap: 15px;
+            align-items: start;
+        }
+        .savas-detay {
+            flex: 1;
+            font-size: 17px;
+            line-height: 1.4;
+        }
+        .alt-baslik {
+            color: #333;
+            font-weight: bold;
+            margin-top: 8px;
+            margin-bottom: 6px;
+            font-size: 18px;
+        }
+        .liste-stil {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .liste-stil li {
+            margin-bottom: 6px;
+            padding-left: 16px;
+            position: relative;
+        }
+        .liste-stil li:before {
+            content: "•";
+            color: #c41e3a;
+            position: absolute;
+            left: 0;
+        }
+        .liste-stil ul {
+            list-style-type: none;
+            padding-left: 16px;
+            margin: 4px 0;
+        }
+        .liste-stil ul li {
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+        .liste-stil ul li:before {
+            content: "-";
+        }
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            background-color: #ff0000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        #scrollTopBtn:hover {
+            background-color: #cc0000;
+            box-shadow: 0 6px 8px rgba(0,0,0,0.4);
+        }
+        #scrollTopBtn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kanada'ya Hoş Geldiniz <span class="maple-leaf">🍁</span></h1>
+    </header>
+    
+    <nav>
+        <a href="code (1).html">Genel Bilgiler</a>
+        <a href="#">Tarihçe</a>
+        <a href="Kültür.html">Kültür</a>
+        <a href="mutfak.html">Mutfak</a>
+        <a href="turizm.html">Turizm</a>
+        <a href="coğrafya.html">Coğrafya</a>
+        <a href="ekonomi.html">Ekonomi</a>
+        <a href="spor.html">Spor</a>
+    </nav>
+    
+    <main>
+        <section id="tarihce">
+            <h2>Kanada Tarihçesi</h2>
+
+            <div class="tarih-card">
+                <h3 class="savas-baslik">Fransız-Kızılderili Savaşları (1686-1763)</h3>
+                <div class="savas-icerik">
+                    <div class="savas-detay">
+                        <p style="margin: 0 0 10px 0;">Kuzey Amerika'daki hakimiyet mücadelesinin en önemli çatışması olan bu savaşlar, kıtanın kaderini belirledi.</p>
+                        
+                        <div style="display: flex; gap: 20px;">
+                            <div style="flex: 1;">
+                                <h4 class="alt-baslik">Savaşın Nedenleri:</h4>
+                                <ul class="liste-stil">
+                                    <li>Fransa ve İngiltere arasındaki sömürge rekabeti</li>
+                                    <li>Ohio Vadisi üzerindeki hakimiyet mücadelesi</li>
+                                    <li>Yerli kabilelerin toprak hakları anlaşmazlıkları</li>
+                                </ul>
+
+                                <h4 class="alt-baslik">Taraflar:</h4>
+                                <ul class="liste-stil">
+                                    <li>Fransa ve Huron Kabileleri İttifakı</li>
+                                    <li>İngiltere ve Iroquois Konfederasyonu İttifakı</li>
+                                </ul>
+                            </div>
+                           
+                            <div style="flex: 1;">
+                                <h4 class="alt-baslik">Sonuç:</h4>
+                                <ul class="liste-stil">
+                                    <li>1763 Paris Antlaşması ile Yeni Fransa İngiliz kontrolüne geçti</li>
+                                    <li>Fransız kültürel hakları garanti altına alındı</li>
+                                    <li>Kuzey Amerika'daki güç dengesi değişti</li>
+                                </ul>
+                            </div>
+                            <img style="width: 450px; display: block; margin-right: 200px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" src="images/Fransız-Kızılderili-Savaşları.jpeg" alt="Fransız-Kızılderili Savaşları">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarih-card">
+                <h3 class="savas-baslik">1812 Savaşı</h3>
+                <div class="savas-icerik">
+                    <div class="savas-detay">
+                        <img style="width: 500px; float: right; margin-right: 200px; border-radius: 8px;" src="images/1812-savaşı.jpeg" alt="1812 Savaşı">
+                        <p>ABD'nin Kanada topraklarını ele geçirme girişimi olan bu savaş, Kanada'nın ulusal kimliğinin oluşmasında büyük rol oynadı.</p>                         
+                        <h4 class="alt-baslik">Önemli Muharebeler:</h4>
+                        <ul class="liste-stil">
+                            <li><b>Queenston Heights</b> (13 Ekim 1812): Kanada'nın kritik zaferi</li>
+                            <li><b>York'un Yakılması</b> (27 Nisan 1813): Toronto'nun önceki adı olan York'un tahribi</li>
+                            <li><b>Lundy's Lane</b> (25 Temmuz 1814): En kanlı muharebe</li>
+                        </ul>                        
+                        <h4 class="alt-baslik">Sonuçlar:</h4>
+                        <ul class="liste-stil">
+                            <li>Savaş öncesi sınırlar korundu</li>
+                            <li>Kanada'nın savunma başarısı ulusal gurur kaynağı oldu</li>
+                            <li>ABD-Kanada sınırı silahsızlandırıldı</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarih-card">
+                <h3 class="savas-baslik">Birinci Dünya Savaşı (1914-1918)</h3>
+                <div class="savas-icerik">
+                    <div class="savas-detay">
+                        <h4 class="alt-baslik">Genel Katılım:</h4>
+                        <ul class="liste-stil">
+                            <li>600.000'den fazla Kanadalı asker katıldı (nüfusun %8'i)</li>
+                            <li>66.000 ölü, 170.000 yaralı</li>
+                        </ul>
+
+                        <h4 class="alt-baslik">Vimy Ridge Muharebesi (9-12 Nisan 1917):</h4>
+                        <ul class="liste-stil">
+                            <li>Dört Kanada tümeni ilk kez birlikte savaştı</li>
+                            <li>Fransız ve İngilizlerin alamadığı stratejik tepe ele geçirildi</li>
+                            <li>Kanada'nın "ulus olarak doğuşu" kabul edilir</li>
+                        </ul>
+
+                        <h4 class="alt-baslik">Diğer Önemli Muharebeler:</h4>
+                        <ul class="liste-stil">
+                            <li>2. Ypres (1915): İlk zehirli gaz saldırısına karşı direniş</li>
+                            <li>Somme (1916): 24.000 kayıp verilen büyük muharebe</li>
+                            <li>Passchendaele (1917): Çamur içinde geçen zorlu savaş</li>
+                        </ul>
+                    </div>
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <img style="width: 45%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" src="images/birinci-dünya-savaşı.jpeg">
+                        <img style="width: 45%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" src="images/Vimy-Ridge-Muharebesi.jpeg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarih-card">
+                <h3 class="savas-baslik">İkinci Dünya Savaşı (1939-1945)</h3>
+                <div style="display: flex;">
+                    <div style="flex: 0 0 40%; padding-right: 20px;">
+                        <div style="font-size: 19px;">
+                            <h4 class="alt-baslik">Savaşa Giriş:</h4>
+                            <ul class="liste-stil">
+                                <li>10 Eylül 1939'da bağımsız kararla savaş ilan edildi</li>
+                                <li>1.1 milyon Kanadalı asker görev aldı</li>
+                            </ul>
+
+                            <h4 class="alt-baslik">Önemli Operasyonlar:</h4>
+                            <ul class="liste-stil">
+                                <li><b>Dieppe Baskını (19 Ağustos 1942):</b>
+                                    <ul>
+                                        <li>5.000 Kanadalıdan 3.367'si kayıp</li>
+                                        <li>Normandiya çıkarması için önemli dersler çıkarıldı</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="flex: 0 0 60%; display: flex; gap: 10px; justify-content: flex-end;">
+                        <img style="width: 32%; height: 300px; object-fit: cover; border-radius: 8px;" src="images/ikinci-dünya-savaşı.jpeg">
+                        <img style="width: 32%; height: 300px; object-fit: cover; border-radius: 8px;" src="images/Dieppe-Baskını.jpeg">
+                        <img style="width: 32%; height: 300px; object-fit: cover; border-radius: 8px;" src="images/Normandiya-Çıkarması.jpeg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarih-card">
+                <h3 class="savas-baslik">Modern Dönem Çatışmaları</h3>
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; align-items: start;">
+                    <div style="font-size: 17px;">
+                        <h4 class="alt-baslik">Kore Savaşı (1950-1953):</h4>
+                        <ul class="liste-stil">
+                            <li>26.000 Kanadalı asker katıldı</li>
+                            <li>516 şehit, 1.200'den fazla yaralı</li>
+                            <li>Kapyong Muharebesi'nde önemli başarı</li>
+                        </ul>
+
+                        <h4 class="alt-baslik">Barışı Koruma Misyonları:</h4>
+                        <ul class="liste-stil">
+                            <li>Mısır (1956): Sina'da ilk BM barış gücü</li>
+                            <li>Kıbrıs (1964-1993): 29 yıllık barış görevi</li>
+                            <li>Balkanlar (1990'lar): Bosna ve Kosova</li>
+                        </ul>
+
+                        <h4 class="alt-baslik">Afganistan (2001-2014):</h4>
+                        <ul class="liste-stil">
+                            <li>13 yıl süren en uzun Kanada savaşı</li>
+                            <li>158 asker ve 1 sivil kaybı</li>
+                            <li>Kandahar'da güvenlik ve kalkınma görevi</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" src="images/Kore-Savaşı.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Kanada Tanıtım</p>
+    </footer>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑ Yukarı</button>
+
+    <script>
+        window.onscroll = function() {
+            const btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</body>
+</html>

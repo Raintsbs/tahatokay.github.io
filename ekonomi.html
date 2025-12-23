@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <title>Kanada Ekonomi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #dc0c0c;
+            position: relative;
+            height: 140px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding: 20px 80px;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: normal;
+            position: relative;
+            padding-right: 35px;
+        }
+        .maple-leaf {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #ff0000;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 5px;
+        }
+        .ekonomi-card {
+            height: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .ekonomi-baslik {
+            color: #c41e3a;
+            margin-bottom: 12px;
+            font-size: 22px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+        .ekonomi-card2 {
+            height: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .ekonomi-card3 {
+            height: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .highlight {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff; /* Mavi vurgu */
+        }
+
+        
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f8ff;
+            margin-top: 20px;
+        }
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            background-color: #ff0000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        #scrollTopBtn:hover {
+            background-color: #cc0000;
+            box-shadow: 0 6px 8px rgba(0,0,0,0.4);
+        }
+        #scrollTopBtn:active {
+            transform: scale(0.95);
+        }
+ </style>
+</head>
+
+<body>
+    <header>
+        <h1>Kanada'ya Hoş Geldiniz <span class="maple-leaf">🍁</span></h1>
+    </header>
+    
+    <nav>
+        <a href="code (1).html">Genel Bilgiler</a> 
+        <a href="tarih.html">Tarihçe</a>
+        <a href="Kültür.html">Kültür</a>
+        <a href="mutfak.html">Mutfak</a>
+        <a href="turizm.html">Turizm</a>
+        <a href="coğrafya.html">Coğrafya</a>
+        <a href="#">Ekonomi</a>
+        <a href="spor.html">Spor</a>
+    </nav>
+
+    <main>
+        <section id="Ekonomi">
+            <h2>Ekonomi</h2>
+
+            <div class="ekonomi-card">
+                <div class="ekonomi-baslik">Kanada'nın Temel Gelir Kaynakları</div>
+                <p style="font-size: 20px;">Kanada'nın temel gelir kaynakları, GSYİH'nın büyük bir kısmını oluşturan hizmet sektörü ve küresel ihracatta önemli bir yer tutan zengin doğal kaynaklar (özellikle petrol, doğal gaz, madenler ve orman ürünleri) ile gelişmiş imalat sanayi (otomotiv ve havacılık) tarafından desteklenen çeşitlendirilmiş bir ekonomik yapıya dayanmaktadır.</p>
+                <section id="kanada-gelir-kaynaklari">
+
+    <table border="1" style="width:100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #f2f2f2;">
+                <th style="padding: 10px;">Sektör</th>
+                <th style="padding: 10px;">GSYİH'ya Katkı Payı (Tahmini)</th>
+                <th style="padding: 10px;">Temel Gelir Kaynakları ve Ekonomik Rolü</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 10px;"><strong>1. Hizmet Sektörü</strong></td>
+                <td style="padding: 10px;">%70'in Üzerinde</td>
+                <td style="padding: 10px;">
+                    <ul>
+                        <li style="font-size: 18px;"><strong style="font-size: 18px;">Finans ve Gayrimenkul:</strong> Toronto ve Vancouver gibi şehirler küresel finans merkezleridir.</li>
+                        <li style="font-size: 18px;"><strong style="font-size: 18px;">Sağlık ve Eğitim:</strong> Devlet destekli sosyal hizmetler istihdam sağlar.</li>
+                        <li style="font-size: 18px;"><strong style="font-size: 18px;">Teknoloji:</strong> Özellikle Yapay Zeka (AI) ve Bilişim Teknolojileri (IT) alanında büyük yatırımlar ve gelirler.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><strong>2. Doğal Kaynaklar</strong></td>
+                <td style="padding: 10px;">%10 - %15 Arası</td>
+                <td style="padding: 10px;">
+                    <ul>
+                        <li style="font-size: 18px;"><strong style="font-size: 18px;">Enerji:</strong> Petrol (özellikle Alberta'daki kumulları) ve Doğal Gaz ihracatı.</li>
+                        <li style="font-size: 18px;"><strong style="font-size: 18px;">Madencilik:</strong> Altın, nikel, uranyum ve potaş (gübre hammaddesi).</li>
+                        <li style="font-size: 18px;"><strong style="font-size: 18px;">Ormancılık:</strong> Kereste ve kağıt ürünleri ihracatı.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;"><strong>3. İmalat Sanayii</strong></td>
+                <td style="padding: 10px;">%10 Civarında</td>
+                <td style="padding: 10px;">
+                    <ul>
+                        <li style="font-size: 18px;"><strong style="font-size: 18px;">Otomotiv:</strong> Araç montajı ve parça üretimi (genellikle ABD pazarı için).</li>
+                        <li style="font-size: 18px;"><strong style="font-size: 18px;">Havacılık:</strong> Bombardier gibi firmalarla uçak ve parça üretimi.</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <img style="width: 581px; margin-top: 14px; border-radius: 5px;" alt="Kanada Vize" src="images/imalat-sanayii.png">
+    <img style="width: 582px; margin-top: 14px; border-radius: 5px;" alt="Kanada Vize" src="images/madencilik.jpeg">
+</section>
+</div>
+
+       <div class="ekonomi-card2">
+            <div class="ekonomi-baslik">Kanada'nın İthalat ve İhracat Yapısı</div>
+            <p style="font-size: 20px;">Kanada ekonomisi, dış ticarete yüksek oranda bağımlıdır ve enerji, hammadde ve imalat ürünleri ticaretinde küresel bir oyuncudur. Başlıca ticaret ortağı ABD'dir; iki ülke arasındaki entegrasyon çok yüksektir.</p>
+            <section id="ithalat-ihracat">
+    
+    <h3>📈 En Çok İhraç Edilen Ürünler</h3>
+    <table border="1" style="width:100%; border-collapse: collapse; margin-bottom: 25px;">
+        <thead>
+            <tr style="background-color: #e6f7ff;">
+                <th style="padding: 10px;">Sıra</th>
+                <th style="padding: 10px;">İhraç Ürünü</th>
+                <th style="padding: 10px;">Ekonomik Önemi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 10px;">1.</td>
+                <td style="padding: 10px; font-size: 18px;">Mineral Yakıtlar (Petrol, Gaz)</td>
+                <td style="padding: 10px; font-size: 18px;">Net enerji ihracatçısı konumundadır; en büyük gelir kaynaklarından biridir.</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">2.</td>
+                <td style="padding: 10px; font-size: 18px;">Otomobiller ve Taşıtlar</td>
+                <td style="padding: 10px; font-size: 18px;">ABD pazarına yönelik güçlü bir otomotiv endüstrisi mevcuttur.</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px;">3.</td>
+                <td style="padding: 10px; font-size: 18px;">Kıymetli Metaller ve Cevherler</td>
+                <td style="padding: 10px; font-size: 18px;">Özellikle altın, çinko ve uranyum gibi madenlerin ihracatı.</td>
+            </tr>
+        </tbody>
+    </table>
+<img style="width: 560px; margin-top: 14px; border-radius: 5px;" alt="Kanada Vize" src="images/ihracat.png">
+<img style="width: 560px; height: 507px; margin-top: 14px; margin-left: 40px; border-radius: 5px;" alt="Kanada Vize" src="images/ülke-ihracat.png">
+
+    <p style="font-size: 20px;">Kanada'nın sanayisi ve yüksek tüketim gücü, özellikle gelişmiş makineler, elektronik ve tüketim malları ithalatını zorunlu kılmaktadır.</p>
+    <h3>📉 En Çok İthal Edilen Ürünler</h3>
+    <table border="1" style="width:100%; border-collapse: collapse;">
+        <thead>
+            <tr style="background-color: #fff0e6;">
+                <th style="padding: 10px;">Sıra</th>
+                <th style="padding: 10px;">İthal Ürünü</th>
+                <th style="padding: 10px;">Ekonomik Önemi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 10px; font-size: 18px;">1.</td>
+                <td style="padding: 10px; font-size: 18px;">Otomobiller ve Taşıt Parçaları</td>
+                <td style="padding: 10px; font-size: 18px;">Yurt içi tüketimi ve imalat sanayiini destekleyen kritik ithalat.</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-size: 18px;">2.</td>
+                <td style="padding: 10px; font-size: 18px;">Makineler ve Elektrikli Cihazlar</td>
+                <td style="padding: 10px; font-size: 18px;">Yüksek teknoloji ve bilişim sektörünün temel ihtiyacı.</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-size: 18px;">3.</td>
+                <td style="padding: 10px; font-size: 18px;">İlaç ve Farmasötik Ürünler</td>
+                <td style="padding: 10px; font-size: 18px;">Gelişmiş sağlık sisteminin devamlılığı için hayati önem taşır.</td>
+            </tr>
+        </tbody>
+    </table>
+    <img style="width: 560px; margin-top: 14px; border-radius: 5px;" alt="Kanada Vize" src="images/ithalat.png">
+    <img style="width: 560px;  margin-top: 50px; margin-left: 40px; border-radius: 5px;" alt="Kanada Vize" src="images/ülke-ithalat.png">
+</section>
+</div>
+
+    <div class="ekonomi-card3">
+        <div class="ekonomi-baslik">Kanada'nın Gelir Dağılımı (Eşitsizlik Durumu)</div>
+        <p style="font-size: 20px;">Kanada, yüksek gelirli ve güçlü sosyal refah programlarına sahip bir ülke olmasına rağmen, küresel trendlere paralel olarak gelir eşitsizliğinde son yıllarda hafif bir artış gözlenmektedir.</p>
+        <h2>Gini Katsayısı Nedir?</h2>
+        <p style="font-size: 20px;">Gini Katsayısı, bir ülkedeki veya bölgedeki gelir veya servet dağılımının eşitsizliğini ölçmek için kullanılan en yaygın ve güvenilir istatistiksel göstergelerden biridir. İtalyan istatistikçi Corrado Gini tarafından 1912 yılında geliştirilmiştir.
+
+Amacı, bir ekonomideki toplam gelirin veya servetin nüfus arasında ne kadar eşit veya adaletsiz dağıtıldığını sayısal bir değerle ifade etmektir.<br><br>
+ • Gelir dağılımını ölçmek için uluslararası alanda en çok kullanılan araç Gini Katsayısı'dır.
+<br><br>
+• Değer Aralığı: Bu katsayı 0 ile 1 arasında bir değer alır.<br><br>
+• Anlamı:
+0 (Sıfır): Mükemmel eşitliği (herkesin geliri aynı) ifade eder.<br><br>
+• 1 (Bir): Mükemmel eşitsizliği (tüm gelirin tek bir kişinin elinde olması) ifade eder.</p>
+
+    <table border="1" style="width:100%; border-collapse: collapse; margin-bottom: 25px;">
+        <thead>
+            <tr style="background-color: #f0f8ff;">
+                <th style="padding: 10px;">Gini Değeri</th>
+                <th style="padding: 10px;">Anlamı</th>
+                <th style="padding: 10px;">Açıklama</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 10px; font-size: 18px;"><strong>0</strong> (Sıfır)</td>
+                <td style="padding: 10px; font-size: 18px;"><strong>Mükemmel Eşitlik</strong></td>
+                <td style="padding: 10px; font-size: 18px;">Tüm nüfusun aynı gelire sahip olduğu ideal durumu ifade eder.</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-size: 18px;"><strong>1</strong> (Bir)</td>
+                <td style="padding: 10px; font-size: 18px;"><strong>Mükemmel Eşitsizlik</strong></td>
+                <td style="padding: 10px; font-size: 18px;">Tüm gelirin tek bir kişinin elinde toplandığı teorik durumu ifade eder.</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; font-size: 18px;"><strong>0.30 - 0.35</strong></td>
+                <td style="padding: 10px; font-size: 18px;"><strong>Düzey Eşitsizlik</strong></td>
+                <td style="padding: 10px; font-size: 18px;">Kanada gibi gelişmiş ekonomilerin, sosyal yardımlar sonrası (net gelir) dağılımında görülen seviyedir.</td>
+            </tr>
+        </tbody>
+    </table>
+<img style="width: 300px; float: left; " alt="Kanada Vize" src="images/Gini-Katsayısı.webp">
+
+    <h2>Kanada'da Gelir Dağılımına İlişkin Önemli Nokta</h2>
+
+    <p style="font-size: 20px;">
+        Kanada'nın Gini Katsayısı, genellikle vergi ve sosyal yardımlar gibi devlet transferleri <strong>öncesinde</strong> yüksektir. Ancak, güçlü sosyal güvenlik ağları (evrensel sağlık sigortası, emeklilik ve işsizlik yardımları) ve aşamalı vergilendirme sistemi, eşitsizliği önemli ölçüde azaltarak **Net Gelir Gini Katsayısını** OECD ortalamasının altında tutmaktadır. Bu durum, devlet politikalarının refahın yeniden dağıtımındaki etkinliğini gösterir.
+    </p>
+
+    <h2>Kullanım Alanları ve Önemli Farklılıklar</h2>
+    <p style="font-size: 20px;">
+        Gini katsayısı, politikacıların, ekonomistlerin ve sosyal bilimcilerin bir ülkenin refah seviyesi ve sosyal yapısı hakkında fikir edinmesi için hayati bir göstergedir.
+    </p>
+    
+    <h2>Piyasa Geliri vs. Net Gelir</h2>
+    <p style="font-size: 20px;"
+    >Gini katsayısı iki farklı gelir türü için hesaplanabilir ve bu, eşitsizliğin kaynağını anlamak için kritik öneme sahiptir:<br><br>
+    1. <strong style="font-size: 20px;">Piyasa Geliri Gini Katsayısı (Vergi ve Transfer Öncesi):</strong> Maaşlar, kiralar, faizler gibi piyasadan elde edilen gelir dağılımını gösterir. Bu katsayı genellikle yüksektir.<br><br>
+    2. <strong style="font-size: 20px;">Gelir Gini Katsayısı (Vergi ve Transfer Sonrası):</strong> Devletin sosyal yardımları (işsizlik, emeklilik, çocuk yardımı) eklendikten ve vergiler çıkarıldıktan sonraki nihai gelir dağılımını gösterir. Gelişmiş sosyal devletlerde, bu katsayı, piyasa geliri katsayısına göre önemli ölçüde düşük çıkar.<br><br>
+    Kanada'da Piyasa Geliri Gini katsayısı yüksek (yaklaşık 0.45) iken, güçlü sosyal yardımlar ve ilerici vergilendirme sayesinde Net Gelir Gini Katsayısı 0.32-0.34 aralığına düşmektedir. Bu durum, devletin sosyal politikalarının eşitsizliği azaltmadaki gücünü ortaya koyar.
+    </p>
+    
+
+    <table>
+        <thead>
+            <tr>
+                <th>Gelir Türü</th>
+                <th>Tanım</th>
+                <th>Ortanca Gelir (2025 CAD)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="highlight">Piyasa Geliri</td>
+                <td style="font-size: 18px;">Çalışma (maaş, ücretler) ve yatırımdan (faiz, temettü) elde edilen geliri ifade eder.</td>
+                <td>$84,000</td>
+            </tr>
+            <tr>
+                <td class="highlight">Net Gelir</td>
+                <td style="font-size: 18px;">Piyasa Gelirine hükümet transferlerinin (emeklilik, sosyal yardım vb.) eklenmesi ve gelir vergilerinin çıkarılmasıyla bulunan gelirdir.</td>
+                <td>$73,000</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+    </div>
+    <div class="ekonomi-card">
+            <div class="ekonomi-baslik">Kişi Başı Milli Gelir</div>
+            <p style="font-size: 20px;">Kişi başına düşen milli gelir, bir ülkenin toplam ekonomik gücünün (milli gelirin) o ülkenin toplam nüfusuna bölünmesiyle elde edilen ortalama gelirdir.
+               Bu gösterge, o ülkenin vatandaşlarının ortalama yaşam standardı ve refah düzeyi hakkında genel bir fikir verir.<br><br>
+                <strong>• Nasıl Hesaplanır: </strong> En yaygın kullanılan yöntem, Gayri Safi Yurt İçi Hasıla (GSYİH) verisi üzerinden hesaplamaktır.<br><br>
+                <img style="margin-left: 250px;" alt="Kişi Başına GSYİH" src="images/kişi-başına.png"><br>
+                <strong>• GSYİH (GDP):</strong> Bir ülkenin sınırları içerisinde, belirli bir dönemde (genellikle bir yıl) üretilen tüm nihai mal ve hizmetlerin toplam piyasa değeridir.<br><br>
+                <strong>• GSMH (GNP):</strong> Bir ülkenin vatandaşlarının hem yurt içinde hem de yurt dışında elde ettikleri toplam geliri ifade eder.<br><br>
+                Uluslararası karşılaştırmalar genellikle ABD Doları ($) cinsinden yapılır ve bu hesaplamalarda iki farklı yöntem kullanılır:<br><br>
+                1. <strong style="font-size: 20px;">Nominal Kişi Başı Gelir:</strong> Cari döviz kurları kullanılarak hesaplanır. Bu yöntem, döviz kuru dalgalanmalarına karşı hassastır.<br><br>
+                2. <strong style="font-size: 20px;">Satın Alma Gücü Paritesi (PPP) Kişi Başı Gelir:</strong> Farklı ülkelerdeki fiyat seviyelerini dikkate alarak hesaplanır. Bu yöntem, yaşam maliyetlerindeki farklılıkları daha iyi yansıtır ve uluslararası karşılaştırmalarda daha güvenilir sonuçlar verir.
+            </p>
+            <table>
+        <thead>
+            <tr>
+                <th>Yıl (Yaklaşık)</th>
+                <th>Kişi Başına GSYİH (Nominal USD)</th>
+                <th>Piyasa Geliri Gini Katsayısı (Vergi Öncesi)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>**1995**</td>
+                <td>~20.000 $</td>
+                <td>0.430 - 0.440 Aralığı <span class="emphasis">(Düşük Eşitsizlik)</span></td>
+            </tr>
+            <tr>
+                <td>**2005**</td>
+                <td>~40.000 $</td>
+                <td>0.470 - 0.480 Aralığı</td>
+            </tr>
+            <tr>
+                <td>**2015**</td>
+                <td>~44.000 $</td>
+                <td>0.490 - 0.500 Aralığı</td>
+            </tr>
+            <tr>
+                <td>**2023**</td>
+                <td>~53.242 $</td>
+                <td>0.500 - 0.510 Aralığı <span class="emphasis">(Yüksek Eşitsizlik)</span></td>
+            </tr>
+             <tr>
+                <td>**2025**</td>
+                <td>~58.420 $</td>
+                <td>0.500 - 0.510 Aralığı <span class="emphasis">(Yüksek Eşitsizlik)</span></td>
+            </tr>
+        </tbody>
+    </table>
+        </div>
+
+        <div class="ekonomi-card">
+            <div class="ekonomi-baslik">Kanada Para Birimi (CAD)</div>
+            <p style="font-size: 20px;">
+                Kanada'nın resmi para birimi Kanada Doları'dır (CAD). Kanada Doları, genellikle "$" veya "C$" sembolleriyle gösterilir ve dünya genelinde yaygın olarak kullanılan bir para birimidir.
+                Kanada Doları, küresel olarak en çok ticareti yapılan rezerv para birimleri arasında yer alan, istikrarı ve "emtia para birimi" olma özelliği ile bilinen önemli bir para birimidir.
+            </p>
+            <table>
+        <thead>
+            <tr>
+                <th colspan="2">Para Birimi Özellikleri</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Para Biriminin Adı</th>
+                <td>**Kanada Doları** (Canadian Dollar)</td>
+            </tr>
+            <tr>
+                <th>Uluslararası Kodu</th>
+                <td>**CAD** (ISO 4217 Kodu)</td>
+            </tr>
+            <tr>
+                <th>Sembolü</th>
+                <td>$ (Diğer dolarlardan ayırmak için: **C\$** veya **Can\$**)</td>
+            </tr>
+            <tr>
+                <th>Alt Birimi</th>
+                <td>1 Kanada Doları = **100 Cent** (Sent)</td>
+            </tr>
+            <tr>
+                <th>Merkez Bankası</th>
+                <td>**Bank of Canada** (Kanada Bankası)</td>
+            </tr>
+            <tr>
+                <th>Para Tipi</th>
+                <td>Önemli bir **Emtia Para Birimi** (Commodity Currency)</td>
+            </tr>
+        </tbody>
+    </table>
+             <h2>Madeni Paralar ve Banknotlar (İsimleri)</h2>
+             <p style="font-size: 20px;">
+                Kanada'nın madeni paraları ve banknotları, ülkenin doğal güzelliklerini, tarihini ve önemli figürlerini yansıtan tasarımlara sahiptir.<br><br>
+                <strong>Madeni Paralar:</strong></strong><br><br>
+                <strong>• 1 Dolar (C$1):</strong> Üzerinde Kanada'nın ulusal sembollerinden biri olan "Loon" (Büyük Dalgıç Kuşu) resmi olduğu için "Loonie" (Luni) olarak adlandırılır.<br><br>
+                <strong>• 2 Dolar (C$2):</strong> Toonie" (Tuni) olarak anılır. Bu isim, "Two" (iki) kelimesi ile "Loonie" kelimesinin birleşimiyle oluşmuştur.<br><br>
+                <strong>• 25 Cent:</strong> Quarter olarak bilinir.<br><br>
+                <strong>• 10 Cent:</strong> Dime olarak adlandırılır.<br><br>
+                <strong>• 5 Cent:</strong> Nickel olarak bilinir.<br><br>
+                <strong>• 1 Cent:</strong> Penny olarak adlandırılır. (Not: Kanada 2013 yılında 1 cent madeni parayı tedavülden kaldırmıştır.)<br><br>
+                <img style=" width: 220px; margin-left: 50px; margin-right: 8px;" alt="1 CAD" src="images/1-cad.jpeg">
+                <img style=" width: 220px; margin-right: 8px;" alt="2 CAD" src="images/2-cad.jpeg">
+                <img style=" width: 220px; margin-right: 8px;" alt="25 cent" src="images/25-cent.jpeg">
+                <img style=" width: 220px; margin-right: 8px;" alt="10 cent" src="images/10-cent.jpeg">
+                <img style=" width: 110px; margin-right: 8px;" alt="5 cent" src="images/5-cent.jpeg"><br><br>
+                <strong>Banknotlar: (Polimer Teknolojisi)</strong><br><br>
+                Kanada, 2011 yılından itibaren dayanıklı, çevre dostu ve ileri güvenlik özelliklerine sahip polimer (plastik) banknotlara geçmiştir. Bu banknotlar, sahteciliğe karşı son derece dayanıklıdır.<br><br>
+                <strong>• Sık kullanılan banknotlar:</strong> 5, 10, 20, 50 ve 100 C$'dır.<br><br> 
+                <img style="width: 560px; margin-top: 14px; border-radius: 5px;" alt="Kanada Vize" src="images/50-cad.jpeg">
+                <img style="width: 560px;  margin-top: 14px; margin-left: 40px; border-radius: 5px;" alt="Kanada Vize" src="images/100-cad.jpeg">       
+            </p>
+            <h2>Ekonomik Önemi ve Değerini Etkileyen Faktörler</h2>
+            <p style="font-size: 20px;">
+                Kanada Doları, uluslararası piyasalarda güçlü ve güvenilir bir para birimi olarak kabul edilir. Değerini etkileyen temel faktörler şunlardır:<br><br>
+                <strong>• Emtia Para Birimi (Commodity Currency):</strong> Kanada, dünyanın önde gelen petrol, doğal gaz, mineraller, kereste ve diğer doğal kaynak ihracatçısıdır. Bu nedenle, Kanada Doları'nın değeri, büyük ölçüde küresel emtia fiyatları ile paralel hareket eder. Petrol fiyatları yükseldiğinde, CAD genellikle değer kazanır.<br><br>
+                <strong>• ABD Ekonomisi ve Ticareti:</strong> Kanada'nın ticaretinin büyük bir kısmı (%80'den fazlası) ABD ile yapılmaktadır. Bu, CAD/USD çapraz kurunu Kanada ekonomisi için en önemli kur haline getirir. ABD ekonomisindeki güçlü toparlanmalar veya faiz artışları, CAD'nin değerini doğrudan etkileyebilir.<br><br>
+                <strong>• Kanada Merkez Bankası (Bank of Canada) Politikaları:</strong> Merkez Bankası'nın faiz oranı kararları ve para politikası, tıpkı diğer büyük para birimlerinde olduğu gibi CAD'nin değerini belirleyen ana etkenlerdir.<br><br>
+                <strong>• Ekonomik ve Politik İstikrar:</strong> Kanada, sağlam bankacılık sistemi, düşük enflasyon oranları ve politik istikrarıyla uluslararası yatırımcılar için güvenilir bir liman olarak görülür.
+            </p>  
+          <h2>🔄 CAD/₺ Kur İlişkisini Belirleyen Detaylı Faktörler</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Etki Alanı</th>
+                <th>Kanada Doları (CAD) Faktörü</th>
+                <th>Türk Lirası (₺) Faktörü</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="cad-factor">
+                <td class="factor-type">Temel İhracat</td>
+                <td>**Petrol ve Doğal Gaz Fiyatları** (Yükselmesi CAD'yi güçlendirir.)</td>
+                <td>Dış ticaret dengesi (Cari Açık baskısı).</td>
+            </tr>
+            <tr class="try-factor">
+                <td class="factor-type">Para Politikası</td>
+                <td>Kanada Merkez Bankası Faiz Kararları.</td>
+                <td>**Türkiye Cumhuriyeti Merkez Bankası (TCMB) Politikaları** (Reel faiz düzeyi).</td>
+            </tr>
+            <tr class="cad-factor">
+                <td class="factor-type">En Önemli Ortak</td>
+                <td>ABD Ekonomik Performansı ve FED Politikaları.</td>
+                <td>Küresel Risk İştahı ve Yatırımcı Güveni.</td>
+            </tr>
+            <tr class="try-factor">
+                <td class="factor-type">İç Risk</td>
+                <td>-</td>
+                <td>**Yüksek Enflasyon** ve Finansal İstikrar Algısı.</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div class="ekonomi-card">
+         <div class="ekonomi-baslik">Endüstrileşme</div>
+         <p style="font-size: 20px;">
+            Endüstrileşme, üretim faktörlerinin (emek, sermaye, toprak) sanayi sektörüne kaymasıyla karakterize edilen bir ekonomik ve sosyal değişim dönemidir.
+             Endüstrileşme, ekonomik büyümeyi hızlandırır, şehirleşmeyi teşvik eder ve yaşam standartlarını yükseltir. Ancak, aynı zamanda çevresel bozulma, işçi hakları sorunları ve sosyal eşitsizlik gibi zorlukları da beraberinde getirebilir.
+            Bu süreç, genellikle aşağıdakilerin kullanımının yaygınlaşmasıyla hızlanır:<br><br>
+            <strong>• Teknoloji ve Makineler:</strong> Üretkenliği artıran, emek yoğunluğu azaltan yeni icatların kullanımı.<br><br>
+            <strong>• Kitlesel Üretim:</strong> Yüksek miktarda, standart ürünlerin düşük maliyetle üretilmesi.<br><br>
+            <strong>• Enerji Kaynakları:</strong> Kömür, petrol, elektrik gibi yeni enerji kaynaklarının fabrikalarda kullanılması.<br><br>
+            <strong>• Ulaşım ve İletişim:</strong> Demiryolları, buharlı gemiler ve telgraf gibi yenilikler, hammadde ve ürünlerin daha hızlı taşınmasını sağladı.<br><br>
+            <strong>• 1. Endüstri Devrimi: Mekanizasyon (18. Yüzyıl Sonu)</strong> Bu dönem, endüstrileşmenin başlangıcıdır.<br><br>
+            <strong>• Teknoloji:</strong> Buhar gücünün icadı ve kullanımı (özellikle tekstil endüstrisinde).<br><br>
+            <strong>• Enerji Kaynağı:</strong> Kömür.<br><br>
+            <strong>• Temel Dönüşüm:</strong> Üretimin ev atölyelerinden fabrikalara (fabrika sistemi) geçmesi. Tarım toplumundan sanayi toplumuna geçişin ilk adımıdır.<br><br>
+        </p>
+        <img style="width: 560px; height: 370px; float: left; " alt="endustri" src="images/endrüstri.jpg">
+        <img style="width: 560px; height: 370px;  " alt="endustri" src="images/endustri-2.png">
+
+        <p style="font-size: 20px;">
+            <strong>• 2. Endüstri Devrimi: Seri Üretim (19. Yüzyıl Sonu - 20. Yüzyıl Başı):</strong> Bu dönem, endüstrileşmenin başlangıcıdır.<br><br>
+            <strong>• Teknoloji:</strong> Elektrik enerjisinin yaygınlaşması, yanmalı motorlar.<br><br>
+            <strong>• Metot:</strong> Seri üretim hatları (assembly lines) ve Taylorizm (bilimsel yönetim).<br><br>
+            <strong>• Temel Dönüşüm:</strong> Ford'un otomobil fabrikalarındaki gibi kitlesel üretimin başlaması. Kimya ve çelik sanayileri yükselişe geçti.<br><br>
+        </p>
+        <img style="width: 560px; height: 370px; float: left; " alt="endustri" src="images/endustri-3.png">
+        <img style="width: 560px; height: 370px; margin-left: 40px;" alt="endustri" src="images/endustri-4.png">
+
+         <p style="font-size: 20px;">
+            <strong>• 3. Endüstri Devrimi: Dijitalleşme (20. Yüzyıl Ortası):</strong> Bu dönem, endüstrileşmenin başlangıcıdır.<br><br>
+            <strong>• Teknoloji:</strong> Bilgisayarlar, internet, programlanabilir mantık denetleyicileri (PLC).<br><br>
+            <strong>• Metot:</strong> Üretimin elektronik ve IT sistemleriyle otomatikleştirilmesi.<br><br>
+            <strong>• Temel Dönüşüm:</strong> Globalleşme hızlandı, hizmet sektörü sanayiden daha fazla büyümeye başladı.<br><br>
+        </p>
+        <img style="width: 560px; height: 370px; float: left; " alt="endustri" src="images/endustri-5.png">
+        <img style="width: 560px; height: 370px; margin-left: 40px;" alt="endustri" src="images/endustri-6.png">
+
+        <p style="font-size: 20px;">
+            <strong>• 4. Endüstri Devrimi: Siber-Fiziksel Sistemler (Günümüz):</strong> Bu dönem, endüstrileşmenin başlangıcıdır.<br><br>
+            <strong>• Teknoloji:</strong> Yapay zekâ (AI), Nesnelerin İnterneti (IoT), büyük veri analitiği, bulut bilişim, robotik.<br><br>
+            <strong>• Metot:</strong> Siber-Fiziksel Sistemler aracılığıyla gerçek zamanlı, tamamen birbirine bağlı ve akıllı (smart) fabrikalar oluşturulması.<br><br>
+            <strong>• Temel Dönüşüm:</strong> Üretim esnekleşir, makineler birbirleriyle ve insanlarla iletişim kurar (Akıllı Fabrikalar).<br><br>
+        </p>
+        <img style="width: 560px; height: 370px; float: left; " alt="endustri" src="images/endustri-7.png">
+        <img style="width: 560px; height: 370px; margin-left: 40px;" alt="endustri" src="images/endustri-8.png">
+
+        <h2>⚙️ Endüstrileşme Süreci: Dört Sanayi Devrimi Karşılaştırması</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Aşama</th>
+                <th>Temel Odak Noktası</th>
+                <th>Ana Teknoloji ve Enerji</th>
+                <th>Toplumsal ve Ekonomik Dönüşüm</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>**1. Sanayi Devrimi** (18. Yüzyıl Sonu)</td>
+                <td><span class="emphasis">Mekanizasyon</span></td>
+                <td>Buhar Gücü, Su Gücü, Kömür. Mekanik tezgahlar.</td>
+                <td>Üretimin **Fabrika Sistemine** geçişi. Kırsaldan kentlere göç (Kentleşme).</td>
+            </tr>
+            <tr>
+                <td>**2. Sanayi Devrimi** (19. Yüzyıl Sonu)</td>
+                <td><span class="emphasis">Seri Üretim</span></td>
+                <td>Elektrik Enerjisi. Montaj hatları ve Kitlesel Üretim.</td>
+                <td>Ulaşım ve iletişimde devrim (Telefon, Otomobil). **Kitlesel tüketim**in doğuşu.</td>
+            </tr>
+            <tr>
+                <td>**3. Sanayi Devrimi** (20. Yüzyıl Ortası)</td>
+                <td><span class="emphasis">Dijitalleşme ve Otomasyon</span></td>
+                <td>Bilgisayarlar, İnternet, Elektronik. Programlanabilir Mantık Denetleyicileri (PLC).</td>
+                <td>Üretimde esneklik ve hassasiyetin artması. **Hizmet Sektörünün** yükselişi.</td>
+            </tr>
+            <tr>
+                <td>**4. Sanayi Devrimi** (Günümüz - Endüstri 4.0)</td>
+                <td><span class="emphasis">Siber-Fiziksel Sistemler ve Akıllılık</span></td>
+                <td>Yapay Zekâ (AI), Nesnelerin İnterneti (IoT), Bulut Bilişim, Büyük Veri.</td>
+                <td>Tüm üretim süreçlerinin gerçek zamanlı **ağa bağlanması** ve özerk karar alma yeteneği.</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">
+                    <small>Bu süreç, ekonomilerin tarım temelli yapılardan, ileri teknoloji ve otomasyon merkezli yapılara doğru geçirdiği yapısal dönüşümü özetlemektedir.</small>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+    
+             <footer>
+        <p>&copy; 2025 - Kanada Tanıtım</p>
+    </footer>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑ Yukarı</button>
+
+    <script>
+        window.onscroll = function() {
+            const btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+   </section>
+</main>
+            

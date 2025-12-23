@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <title>Kanada Spor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #dc0c0c;
+            position: relative;
+            height: 140px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding: 20px 80px;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: normal;
+            position: relative;
+            padding-right: 35px;
+        }
+        .maple-leaf {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #ff0000;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 5px;
+        }
+        .spor-card {
+            height: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .spor-baslik {
+            color: #c41e3a;
+            margin-bottom: 12px;
+            font-size: 22px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+        .success-table-v2 {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .success-table-v2 th {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            text-align: left;
+            border-bottom: 3px solid #e74c3c;
+        }
+        .success-table-v2 td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .success-table-v2 tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .success-table-v2 tr:hover {
+            background-color: #f1f2f6;
+        }
+        .category-icon {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+        .status-badge {
+            background-color: #27ae60;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        .women-soccer-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .women-soccer-table thead {
+            background: linear-gradient(135deg, #d80621 0%, #a00418 100%);
+            color: white;
+        }
+        .women-soccer-table th {
+            padding: 18px;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+        .women-soccer-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: middle;
+        }
+        .year-label {
+            font-weight: bold;
+            color: #d80621;
+            font-size: 1.1em;
+            white-space: nowrap;
+        }
+        .achievement-title {
+            font-weight: 600;
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .detail-text {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+        .medal-icon {
+            margin-right: 8px;
+        }
+        .women-soccer-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+
+        .men-soccer-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .men-soccer-table thead {
+            background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+            color: white;
+        }
+        .men-soccer-table th {
+            padding: 18px;
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+        }
+        .men-soccer-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: middle;
+        }
+
+        table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        margin: 20px 0;
+    }
+    th {
+        background-color: #e67e22;
+        color: white;
+        text-align: left;
+        padding: 12px;
+    }
+    td {
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+    .year-col {
+        font-weight: bold;
+        width: 15%;
+    }
+    .event-col {
+        width: 35%;
+    }
+
+
+    
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f8ff;
+            margin-top: 20px;
+        }
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            background-color: #ff0000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        #scrollTopBtn:hover {
+            background-color: #cc0000;
+            box-shadow: 0 6px 8px rgba(0,0,0,0.4);
+        }
+        #scrollTopBtn:active {
+            transform: scale(0.95);
+        }
+
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>Kanada'ya Hoş Geldiniz <span class="maple-leaf">🍁</span></h1>
+    </header>
+    
+    <nav>
+        <a href="code (1).html">Genel Bilgiler</a> 
+        <a href="tarih.html">Tarihçe</a>
+        <a href="Kültür.html">Kültür</a>
+        <a href="mutfak.html">Mutfak</a>
+        <a href="turizm.html">Turizm</a>
+        <a href="coğrafya.html">Coğrafya</a>
+        <a href="ekonomi.html">Ekonomi</a>
+        <a href="#">Spor</a>
+    </nav>
+
+    <main>
+        <section id="Spor">
+            <h2>Spor</h2>
+
+        <div class="spor-card">
+            <div class="spor-baslik">Kanada'da En Çok Yapılan ve İzlenen Spor Dalları</div>
+            <p style="font-size: 20px;"><strong>Buz Hokeyi: "Kanada'nın Yaşam Biçimi"</strong><br><br> Buz hokeyi Kanada için bir spordan çok daha fazlasıdır; ulusal kimliğin temel taşıdır.<br><br>
+                <strong>• Kültürel Köken:</strong> Kış aylarının çok uzun ve sert geçtiği Kanada'da, donmuş göller ve nehirler doğal oyun alanlarına dönüşmüştür. Bu durum, hokeyi her yaştan insanın ulaşabileceği "halkın sporu" haline getirmiştir.<br><br>
+                <strong>• NHL (Ulusal Hokey Ligi) Dominasyonu:</strong> Dünyanın en prestijli hokey ligi olan NHL'deki oyuncuların yaklaşık %40'ı Kanadalıdır. Toronto Maple Leafs ve Montreal Canadiens gibi takımlar, dünyada en sadık ve geniş taraftar kitlesine sahip takımlar arasındadır.<br><br>
+                <strong>• Eğitim Sistemiyle Bağlantı:</strong> Kanada'daki okulların çoğunda hokey takımları vardır ve yetenekli gençler için profesyonelliğe giden yol çok disiplinli bir şekilde kurgulanmıştır.
+            </p>
+            <table>
+    <thead>
+        <tr>
+            <th>Yıl</th>
+            <th>Olay / Dönüm Noktası</th>
+            <th>Kanada İçin Önemi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="year-col">1875</td>
+            <td class="event-col">İlk Kapalı Alan Maçı</td>
+            <td>Montreal'de (Victoria Skating Rink) bilinen ilk organize iç mekan hokey maçı yapıldı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1893</td>
+            <td class="event-col">Stanley Cup Bağışı</td>
+            <td>Kanada Genel Valisi Lord Stanley, ülkenin en iyi amatör takımı için meşhur gümüş kupayı bağışladı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1917</td>
+            <td class="event-col">NHL'in Kuruluşu</td>
+            <td>Montreal'de kurulan National Hockey League, hokeyi profesyonel bir endüstriye dönüştürdü.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1920</td>
+            <td class="event-col">İlk Olimpiyat Altını</td>
+            <td>Kanada, hokeyin ilk kez yer aldığı Olimpiyatlarda (Antwerp) altın madalyayı kazandı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1950'ler</td>
+            <td class="event-col">Maurice Richard Dönemi</td>
+            <td>"The Rocket" lakaplı efsane, 50 maçta 50 gol atan ilk oyuncu oldu ve Kanada'da bir ikon haline geldi.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1972</td>
+            <td class="event-col">Zirve Serisi (Summit Series)</td>
+            <td>Kanada ve SSCB arasındaki tarihi maçta Paul Henderson'ın golüyle Kanada, hokeyin lideri olduğunu kanıtladı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1980'ler</td>
+            <td class="event-col">Wayne Gretzky Efsanesi</td>
+            <td>"The Great One" lakaplı Kanadalı yıldız, kırılamayacak onlarca rekorla hokeyi dünyaya tanıttı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1994</td>
+            <td class="event-col">Resmi Ulusal Spor</td>
+            <td>Buz hokeyi, Kanada Parlamentosu tarafından resmen "Ulusal Kış Sporu" ilan edildi.</td>
+        </tr>
+        <tr>
+            <td class="year-col">2010</td>
+            <td class="event-col">Altın Gol (Golden Goal)</td>
+            <td>Sidney Crosby, Vancouver Olimpiyatları finalinde uzatmalarda golü atarak Kanada'yı evinde şampiyon yaptı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">2024</td>
+            <td class="event-col">PWHL Başlangıcı</td>
+            <td>Profesyonel Kadınlar Hokey Ligi kurularak kadın hokeyi Kanada'da büyük bir ivme kazandı.</td>
+        </tr>
+    </tbody>
+</table>
+            <img style="width: 560px; height: 350px; margin-right: 20px; border-radius: 5px;" alt="Kanada Buz Hokeyi" src="images/buz-okeyi.jpg">
+            <img style="width: 580px; height: 350px; border-radius: 5px;" alt="Logan Dağı" src="images/buz-okeyi2.png">
+        </div>
+
+        <div class="spor-card">
+            <div class="spor-baslik">Futbol (Soccer): "En Çok Katılım Sağlanan Spor"</div>
+            <p style="font-size: 20px;"> İlginç bir şekilde, Kanada'da lisanslı olarak en çok oynanan spor buz hokeyi değil, futboldur.<br><br>
+                <strong>• Erişilebilirlik:</strong> Hokey için gereken ekipmanlar (paten, kask, sopa, buz pisti kirası) oldukça pahalıdır. Futbol ise sadece bir top ve bir çift ayakkabı gerektirdiği için daha kapsayıcıdır.<br><br>
+                <strong>• Göçmen Etkisi:</strong> Kanada'ya Avrupa, Orta Doğu, Afrika ve Güney Amerika'dan gelen yoğun göç, futbol kültürünü ülkenin her köşesine yaymıştır.<br><br>
+            </p>
+            <div class="spor-baslik">Kadın Milli Takımı: Dünyanın Zirvesi</div>
+            <p style="font-size: 20px;">
+                Kanada Kadın Milli Takımı, dünyadaki en başarılı birkaç takımdan biridir.
+            </p>
+
+        <table class="women-soccer-table">
+    <thead>
+        <tr>
+            <th style="width: 15%;">Yıl</th>
+            <th style="width: 35%;">Başarı / Turnuva</th>
+            <th style="width: 50%;">Açıklama ve Detay</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="year-label">1998</td>
+            <td><span class="achievement-title">CONCACAF Şampiyonluğu</span></td>
+            <td class="detail-text">Kendi evinde düzenlenen turnuvada Meksika'yı yenerek Kuzey Amerika'nın en büyüğü oldular.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2003</td>
+            <td><span class="achievement-title">Dünya Kupası 4.lüğü</span></td>
+            <td class="detail-text">FIFA Kadınlar Dünya Kupası'nda yarı finale çıkarak dünyanın en iyi 4 takımı arasına girdiler.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2010</td>
+            <td><span class="achievement-title">CONCACAF Şampiyonluğu</span></td>
+            <td class="detail-text">İkinci kez kıta şampiyonu olarak bölgedeki dominasyonlarını kanıtladılar.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2011</td>
+            <td><span class="achievement-title">Pan Amerikan Altın Madalya</span></td>
+            <td class="detail-text">Guadalajara'da finalde Brezilya'yı yenerek kıtadaki en büyük spor etkinliğinde zirveye çıktılar.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2012</td>
+            <td><span class="achievement-title">Olimpiyat Bronz Madalya</span></td>
+            <td class="detail-text">Londra Olimpiyatları'nda üçüncülük maçında Fransa'yı yenerek ilk olimpiyat madalyasını kazandılar.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2015</td>
+            <td><span class="achievement-title">Dünya Kupası Çeyrek Final</span></td>
+            <td class="detail-text">Kanada'da düzenlenen Dünya Kupası'nda ev sahibi olarak başarılı bir performans sergilediler.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2016</td>
+            <td><span class="achievement-title">Algarve Kupası Şampiyonu</span></td>
+            <td class="detail-text">Portekiz'deki prestijli turnuvada finalde Brezilya'yı devirerek kupayı kaldırdılar.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2016</td>
+            <td><span class="achievement-title">Olimpiyat Bronz Madalya</span></td>
+            <td class="detail-text">Rio Olimpiyatları'nda üst üste ikinci kez bronz madalya alarak istikrarlarını korudular.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2020</td>
+            <td><span class="achievement-title">Olimpiyat Elemeleri Şamp.</span></td>
+            <td class="detail-text">Tokyo Olimpiyatları'na gitme hakkı kazanarak bölgedeki en iyi takımlardan biri olduklarını gösterdiler.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2021</td>
+            <td><span class="achievement-title">Olimpiyat Şampiyonluğu 🥇</span></td>
+            <td class="detail-text">**Tokyo 2020 (Pandemi sonrası):** Finalde İsveç'i penaltılarla yenerek tarihlerinin ilk Altın Madalyasını kazandılar.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2021</td>
+            <td><span class="achievement-title">SheBelieves Kupası</span></td>
+            <td class="detail-text">Dünyanın en elit takımlarının davet edildiği bu prestijli turnuvada üst düzey rekabet güçlerini pekiştirdiler.</td>
+        </tr>
+    </tbody>
+</table>
+            <img style="width: 560px; height: 350px; margin-right: 20px; border-radius: 5px;" alt="Olimpiyat Şampiyonluğu" src="images/Olimpiyat-Şampiyonluğu.jpg">
+            <img style="width: 580px; height: 350px; border-radius: 5px;" alt="Kanada Futbolu" src="images/futbol2.jpg">
+        </div>
+
+        <div class="spor-card">
+            <div class="spor-baslik">Erkek Milli Takımı: Kuzeyin Yükselişi</div>
+            <p style="font-size: 20px;">
+                Erkek takımı, son yıllarda Alphonso Davies ve Jonathan David gibi yıldızlarla altın çağını yaşıyor.
+            </p>
+
+            <table class="men-soccer-table">
+    <thead>
+        <tr>
+            <th style="width: 15%;">Yıl</th>
+            <th style="width: 35%;">Başarı / Turnuva</th>
+            <th style="width: 50%;">Açıklama ve Detay</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="year-label">1985</td>
+            <td><span class="achievement-title">CONCACAF Şampiyonluğu 🏆</span></td>
+            <td class="detail-text">Kanada erkek futbol tarihinin ilk büyük uluslararası kupası. Bu zaferle 1986 Dünya Kupası biletini aldılar.</td>
+        </tr>
+        <tr>
+            <td class="year-label">1986</td>
+            <td><span class="achievement-title">FIFA Dünya Kupası Katılımı</span></td>
+            <td class="detail-text">Meksika'da düzenlenen turnuvaya katılarak tarihinde ilk kez dünyanın en büyük sahnesine çıktılar.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2000</td>
+            <td><span class="achievement-title">CONCACAF Altın Kupa Şampiyonu 🏆</span></td>
+            <td class="detail-text">Finalde davetli takım Kolombiya'yı 2-0 yenerek Kuzey Amerika'nın en büyüğü olduklarını bir kez daha kanıtladılar.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2019</td>
+            <td><span class="achievement-title">CPL'in Lansmanı</span></td>
+            <td class="detail-text">Kanada Premier Ligi'nin kurulmasıyla profesyonel erkek futbolu ülke geneline yayıldı ve yerli oyuncu havuzu genişledi.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2021</td>
+            <td><span class="achievement-title">Dünya Kupası Elemeleri (Liderlik)</span></td>
+            <td class="detail-text">CONCACAF final grubunu ABD ve Meksika'nın önünde lider bitirerek tarihi bir dominasyon kurdular.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2022</td>
+            <td><span class="achievement-title">FIFA Dünya Kupası (36 Yıl Sonra)</span></td>
+            <td class="detail-text">Katar 2022'ye katılarak 36 yıllık özlemi bitirdiler ve dünya futbolunda "Kanada geri döndü" mesajı verdiler.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2023</td>
+            <td><span class="achievement-title">Nations League Finali</span></td>
+            <td class="detail-text">CONCACAF Uluslar Ligi'nde finale kadar yükselerek gümüş madalya kazandılar.</td>
+        </tr>
+        <tr>
+            <td class="year-label">2024</td>
+            <td><span class="achievement-title">Copa América 4.lüğü</span></td>
+            <td class="detail-text">Dünyanın en zorlu turnuvalarından birinde, ilk kez katılmalarına rağmen yarı finale çıkarak tarihi bir başarı elde ettiler.</td>
+        </tr>
+    </tbody>
+</table>
+<img style="width: 560px; height: 350px; margin-right: 20px; border-radius: 5px;" alt="Kanada Basketbolu" src="images/Dünya-Kupası.jpg">
+            <img style="width: 580px; height: 350px; border-radius: 5px;" alt="Altın Kupa Şampiyonu" src="images/Altın-Kupa-Şampiyonu.jpg">
+
+        </div>
+
+        <div class="spor-card">
+        <div class="spor-baslik">Basketbol: "Yeni Neslin Yükselen Trendi"</div>
+        <p style="font-size: 20px;"> Basketbol, özellikle kentsel alanlarda (Toronto, Vancouver, Montreal) gençler arasında en hızlı büyüyen spordur.<br><br>
+            <strong>• Raptors Etkisi:</strong> 2019 yılında Toronto Raptors'ın NBA şampiyonu olması, tüm ülkede "We The North" (Kuzey Biziz) sloganıyla bir basketbol çılgınlığı başlatmıştır.<br><br>
+            <strong>• James Naismith Mirası:</strong> Basketbolun mucidi Dr. James Naismith bir Kanadalıdır. Bu tarihi bağ, son yıllarda NBA'e giden süperstarların (Shai Gilgeous-Alexander, Jamal Murray vb.) artmasıyla yeniden canlanmıştır.<br><br>
+            <strong>• Sokak Kültürü:</strong> Büyük şehirlerdeki parklarda bulunan basketbol sahaları, gençlerin sosyalleşme noktası haline gelmiştir.
+        </p>
+
+        <table>
+    <thead>
+        <tr>
+            <th>Yıl</th>
+            <th>Olay</th>
+            <th>Kanada İçin Önemi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="year-col">1891</td>
+            <td class="event-col">İcat ve James Naismith</td>
+            <td>Kanadalı Dr. James Naismith, basketbolu icat ederek 13 kuralı yazdı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1892</td>
+            <td class="event-col">İlk Uluslararası Yayılım</td>
+            <td>Basketbol, ABD dışında ilk kez Kanada'da (Montreal YMCA) oynanmaya başlandı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1923</td>
+            <td class="event-col">Federasyonun Kurulması</td>
+            <td>Kanada Amatör Basketbol Birliği (bugünkü Canada Basketball) kuruldu.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1936</td>
+            <td class="event-col">Olimpiyat Gümüş Madalyası</td>
+            <td>Berlin Olimpiyatları'nda Kanada, finalde ABD'ye yenilerek Gümüş madalya kazandı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1946</td>
+            <td class="event-col">İlk NBA (BAA) Maçı</td>
+            <td>NBA tarihinin ilk resmi maçı Toronto'daki Maple Leaf Gardens'ta oynandı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1995</td>
+            <td class="event-col">NBA Kanada Genişlemesi</td>
+            <td>Toronto Raptors ve Vancouver Grizzlies takımları kurularak NBA'e katıldı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">2005 - 2006</td>
+            <td class="event-col">Steve Nash MVP</td>
+            <td>Kanadalı efsane Steve Nash, üst üste iki kez NBA MVP (En Değerli Oyuncu) seçildi.</td>
+        </tr>
+        <tr>
+            <td class="year-col">2019</td>
+            <td class="event-col">Raptors Şampiyonluğu</td>
+            <td>Toronto Raptors, NBA şampiyonu olan ABD dışındaki ilk (ve tek) takım oldu.</td>
+        </tr>
+        <tr>
+            <td class="year-col">2023</td>
+            <td class="event-col">Dünya Kupası Bronz</td>
+            <td>Kanada Erkek Milli Takımı, FIBA Dünya Kupası'nda ilk madalyasını (Bronz) kazandı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">2024+</td>
+            <td class="event-col">Altın Jenerasyon</td>
+            <td>Shai Gilgeous-Alexander gibi yıldızlarla Kanada, NBA'de ABD'den sonra en çok oyuncusu olan ülke konumuna geldi.</td>
+        </tr>
+    </tbody>
+</table>
+        <img style="width: 560px; height: 350px; margin-right: 20px; border-radius: 5px;" alt="Kanada Basketbolu" src="images/kanada-basketbol.jpg">
+            <img style="width: 580px; height: 350px; border-radius: 5px;" alt="James Naismit" src="images/James-Naismit-Mirası.jpg">
+        </div>
+
+        <div class="spor-card">
+        <div class="spor-baslik">Lakros (Lacrosse): "Kadim Miras"</div>
+        <p style="font-size: 20px;"> Kanada'nın resmi yaz sporu olan lakros, kökleri Avrupalıların kıtaya gelişinden çok öncesine, yerli halklara dayanan bir spordur.<br><br>
+            <strong>• Strateji ve Hız:</strong> Ucu fileli sopalarla topu yakalayıp kaleye atmaya dayanan bu spor, son derece fiziksel ve hızlıdır.<br><br>
+            <strong>• İki Versiyon:</strong> Kanada'da hem açık alanda (Field Lacrosse) hem de kapalı hokey sahalarında (Box Lacrosse) oynanır.
+        </p>
+
+        <table>
+    <thead>
+        <tr>
+            <th>Yıl</th>
+            <th>Olay / Dönüm Noktası</th>
+            <th>Kanada ve Spor İçin Önemi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="year-col">Pre-1600</td>
+            <td class="event-col">Yerli Halkların Mirası</td>
+            <td>Haudenosaunee (Iroquois) halkı tarafından "Yaratıcının Oyunu" olarak oynanmaya başlandı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1636</td>
+            <td class="event-col">"La Crosse" İsmi</td>
+            <td>Fransız misyoner Jean de Brébeuf oyunu gördü ve sopayı asaya benzeterek "la crosse" adını verdi.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1856</td>
+            <td class="event-col">Montreal Lakros Kulübü</td>
+            <td>İlk organize kulüp kurularak spor yerli olmayan halk arasında da yaygınlaştı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1867</td>
+            <td class="event-col">William George Beers Kuralları</td>
+            <td>Kanadalı bir diş hekimi olan Beers, modern kuralları yazdı; spor Kanada'nın "Ulusal Oyunu" ilan edildi.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1904</td>
+            <td class="event-col">Olimpiyat Altın Madalyası</td>
+            <td>Kanada (Winnipeg Shamrocks), St. Louis Olimpiyatları'nda altın madalya kazandı.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1931</td>
+            <td class="event-col">"Box Lacrosse"un Doğuşu</td>
+            <td>Buz hokeyi sahalarını yazın kullanmak için oyun kapalı alana taşındı; Kanada'nın en popüler versiyonu oldu.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1987</td>
+            <td class="event-col">Profesyonel Lig (NLL)</td>
+            <td>National Lacrosse League kuruldu; Kanada takımları (Toronto Rock gibi) lige domine etti.</td>
+        </tr>
+        <tr>
+            <td class="year-col">1994</td>
+            <td class="event-col">Ulusal Spor Yasası</td>
+            <td>Lakros, parlamento tarafından resmen "Kanada'nın Ulusal Yaz Sporu" olarak tescillendi.</td>
+        </tr>
+        <tr>
+            <td class="year-col">2006</td>
+            <td class="event-col">Dünya Şampiyonluğu</td>
+            <td>Kanada, açık saha lakrosunda ABD'nin uzun süreli hakimiyetine son vererek dünya şampiyonu oldu.</td>
+        </tr>
+        <tr>
+            <td class="year-col">2028</td>
+            <td class="event-col">Olimpiyatlara Dönüş</td>
+            <td>Lakrosun 2028 Los Angeles Olimpiyatları'na dahil edilmesiyle Kanada, madalyanın en büyük adayı konumuna geldi.</td>
+        </tr>
+    </tbody>
+</table>
+        <img style="width: 560px; height: 350px; margin-right: 20px; border-radius: 5px;" alt="Lakros" src="images/lakros.png">
+        <img style="width: 580px; height: 350px; border-radius: 5px;" alt="Lakros" src="images/lakros2.png">
+        </div>
+        
+        <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif; border: 1px solid #ddd;">
+    <tr style="background-color: #f2f2f2;">
+        <th style="padding: 12px; border: 1px solid #ddd;">Spor Dalı</th>
+        <th style="padding: 12px; border: 1px solid #ddd;">Neden Bir numara?</th>
+        <th style="padding: 12px; border: 1px solid #ddd;">Zorluk Derecesi (Maliyet/Erişim)</th>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid #ddd; font-size: 18px; color: red;">Buz Hokeyi</td>
+        <td style="padding: 10px; border: 1px solid #ddd;">En çok izlenen ve en çok para harcanan spor.</td>
+        <td style="padding: 10px; border: 1px solid #ddd; color: red;">Yüksek (Ekipman pahalı)</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid #ddd; font-size: 18px; color: red;">Futbol</td>
+        <td style="padding: 10px; border: 1px solid #ddd;">En çok lisanslı sporcu sayısına sahip.</td>
+        <td style="padding: 10px; border: 1px solid #ddd; color: green;">Düşük (Erişimi kolay)</td>
+    </tr>
+    <tr>
+        <td style="padding: 10px; border: 1px solid #ddd; font-size: 18px; color: red;">Basketbol</td>
+        <td style="padding: 10px; border: 1px solid #ddd;">Gençler arasında en popüler "cool" spor.</td>
+        <td style="padding: 10px; border: 1px solid #ddd; color: orange;">Orta</td>
+    </tr>
+</table>
+
+       <div style="margin-top: 20px;" class="spor-card">
+        <div class="spor-baslik">Kanada'nın Küresel Spor Arenasındaki Hakimiyeti</div>
+        <p style="font-size: 20px;">
+            <strong>Kış Olimpiyatları: Dünyanın En İyilerinden Biri</strong><br><br>
+            Kanada, Kış Olimpiyatları denilince Norveç ve ABD ile birlikte akla gelen ilk üç ülkeden biridir.<br><br>
+            <strong>• 2010 Vancouver Miladı:</strong> Kendi evinde düzenlenen bu olimpiyatlarda Kanada, 14 altın madalya alarak o dönem kış olimpiyat tarihinde bir rekor kırmıştır.<br><br>
+            <strong>• Disiplinler:</strong> Sadece buz hokeyinde değil; Curling, Artistik Buz Pateni, Freestyle Kayak ve Short Track (Sürat Pateni) branşlarında dünyanın en çok madalya kazanan ülkelerinden biridir.<br><br>
+            <img style="width: 560px; height: 350px; margin-right: 20px; border-radius: 5px;" alt="Vancouver Miladı" src="images/2010-Vancouver-Miladı.jpg">
+            <img style="width: 580px; height: 350px; border-radius: 5px;" alt="Freestyle Kayak" src="images/Freestyle-Kayak.jpg">
+        </p>
+
+       <div class="spor-baslik">Kadın Sporlarında Dünya Liderliği</div>
+        <p style="font-size: 20px;">
+            Kanada, kadınların spora katılımı ve başarısı konusunda bir dünya modelidir.<br><br>
+            <strong>• Kadın Futbolu:</strong> 2020 Tokyo Olimpiyatları'nda altın madalya kazanarak ABD ve Brezilya gibi devleri geride bıraktılar.<br><br>
+            <strong>• Kadın Hokeyi:</strong> Kanada ve ABD kadın hokey takımları arasındaki rekabet, spor dünyasının en büyük derbilerinden kabul edilir. Kanada genellikle bu rekabette üstün olan taraftır.<br><br>
+            <img style="width: 560px; height: 350px; margin-right: 20px; border-radius: 5px;" alt="Kadın Futbolu" src="images/Kadın-Futbolu.jpg">
+            <img style="width: 580px; height: 350px; border-radius: 5px;" alt="Kadın Hokeyi" src="images/Kadın-hokeyi.jpg">
+        </p>
+
+        <div class="spor-baslik">Profesyonel Liglerdeki Başarılar</div>
+        <p style="font-size: 20px;">
+            Kanada, sadece kendi liglerinde değil, uluslararası profesyonel liglerde de büyük başarılar elde etmiştir.<br><br>
+            <strong>• NHL Dominasyonu:</strong> NHL'de yer alan 32 takımın 7'si Kanadalıdır ve bu takımlar ligde sürekli olarak üst sıralarda yer alır.<br><br>
+            <strong>• NBA Yükselişi:</strong> Toronto Raptors'ın 2019 NBA şampiyonluğu, Kanada basketbolunun küresel arenadaki yükselişinin simgesi olmuştur.
+       
+
+       <div class="spor-baslik">Tenis ve Basketbolda "Yeni Dalga"</div>
+       <p style="font-size: 20px;">
+        Son 10 yılda Kanada, geleneksel olmadığı alanlarda da dünya zirvesine yerleşti:<br><br>
+        <strong>• Tennis:</strong> Bianca Andreescu (US Open Şampiyonu), Leylah Fernandez ve Felix Auger-Aliassime gibi genç yeteneklerle Kanada, artık bir "Tenis Ülkesi" olarak anılıyor.<br><br>
+        <strong>• NBA Pipeline:</strong> Kanada, ABD dışında NBA’e en çok oyuncu gönderen ülkedir. Bu, Kanada'nın basketbol altyapısının ne kadar profesyonelleştiğini gösterir.<br><br>
+        <img style="width: 560px; height: 350px; margin-right: 20px; border-radius: 5px;" alt="Tennis" src="images/Tennis-canada.jpg">
+            <img style="width: 580px; height: 350px; border-radius: 5px;" alt="Kadın Hokeyi" src="images/Kadın-hokeyi.jpg">
+       </p>
+
+       <table class="success-table-v2">
+        <thead>
+            <tr>
+                <th>Branş</th>
+                <th>Küresel Başarı Seviyesi</th>
+                <th>Son Durum</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>🏊 **Yüzme**</td>
+                <td>Dünya Rekortmenleri Çıkarıyor</td>
+                <td><span class="status-badge">Zirve</span> Summer McIntosh ile dünya rekorları.</td>
+            </tr>
+            <tr>
+                <td>🏃 **Atletizm (Sprint)**</td>
+                <td>Olimpiyat Altın Madalyası</td>
+                <td><span class="status-badge">Elit</span> Andre De Grasse ile 200m liderliği.</td>
+            </tr>
+            <tr>
+                <td>🔨 **Atletizm (Atmalar)**</td>
+                <td>Dünya Şampiyonlukları</td>
+                <td><span class="status-badge">Yeni Güç</span> Çekiç atmada erkek/kadın dünya birinciliği.</td>
+            </tr>
+            <tr>
+                <td>🎾 **Tenis**</td>
+                <td>Grand Slam Şampiyonları</td>
+                <td><span class="status-badge">Yükselen</span> Bianca Andreescu ve Leylah Fernandez.</td>
+            </tr>
+        </tbody>
+    </table>
+       </div>
+
+
+      <div class="spor-card">
+        <div class="spor-baslik">Kanada'nın Dünyaca Ünlü Sporcuları ve Başarıları</div>
+        <table>
+    <thead>
+        <tr>
+            <th>Sporcu</th>
+            <th>Branş</th>
+            <th>Başarılar ve Önemli Notlar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="category-row"><td colspan="3">2024 - 2025: Günümüzün Dev İsimleri</td></tr>
+        <tr>
+            <td class="athlete-name">Shai Gilgeous-Alexander</td>
+            <td>Basketbol (NBA)</td>
+            <td><span class="highlight">2024-25 NBA MVP</span> ödülünü kazandı. OKC Thunder ile 2025 NBA Şampiyonu ve <b>Finals MVP</b> oldu. Şu an dünyanın en iyi oyuncularından biri kabul ediliyor.</td>
+        </tr>
+        <tr>
+            <td class="athlete-name">Summer McIntosh</td>
+            <td>Yüzme</td>
+            <td>Paris 2024'te 3 Altın madalya kazandı. <span class="highlight">2025 Dünya Şampiyonası</span>'nda 4 bireysel altın madalya ve 3 Dünya Rekoru ile tarihin en dominant yüzücülerinden biri oldu.</td>
+        </tr>
+        <tr>
+            <td class="athlete-name">Connor McDavid</td>
+            <td>Buz Hokeyi (NHL)</td>
+            <td>NHL'in yaşayan efsanesi. 2024 Conn Smythe Trophy sahibi. 2025 itibarıyla 1000 puan barajını en hızlı geçen oyunculardan biri ve dünyanın 1 numaralı hokeycisi.</td>
+        </tr>
+        <tr>
+            <td class="athlete-name">Alphonso Davies</td>
+            <td>Futbol</td>
+            <td>Bayern Münih ile Şampiyonlar Ligi şampiyonu. Kanada Milli Takımı'nın kaptanı ve dünyanın en değerli sol beklerinden biri.</td>
+        </tr>
+        <tr>
+            <td class="athlete-name">Ethan Katzberg</td>
+            <td>Atletizm (Çekiç Atma)</td>
+            <td>Paris 2024 Olimpiyat Şampiyonu ve <span class="highlight">2025 Tokyo Dünya Şampiyonu</span>. Kendi branşında şu an rakipsiz lider.</td>
+        </tr>
+
+        <tr class="category-row"><td colspan="3">Tüm Zamanların İkonları</td></tr>
+        <tr>
+            <td class="athlete-name">Wayne Gretzky</td>
+            <td>Buz Hokeyi</td>
+            <td>"The Great One". NHL tarihinin tüm zamanların en çok gol, asist ve puan üreten oyuncusu. Adı hokey ile eş anlamlıdır.</td>
+        </tr>
+        <tr>
+            <td class="athlete-name">Steve Nash</td>
+            <td>Basketbol</td>
+            <td>2 kez üst üste NBA MVP seçilen ilk Kanadalı. Modern basketbolun oyun kurucu anlayışını değiştiren isim.</td>
+        </tr>
+        <tr>
+            <td class="athlete-name">Christine Sinclair</td>
+            <td>Futbol</td>
+            <td>Milli takımlar düzeyinde <span class="highlight">tüm zamanların en çok gol atan oyuncusu</span> (190+ gol). 2025'te Kanada Spor Onur Listesi'ne girdi.</td>
+        </tr>
+        <tr>
+            <td class="athlete-name">Georges St-Pierre</td>
+            <td>MMA (UFC)</td>
+            <td>İki farklı siklette UFC Şampiyonu. Karma dövüş sanatları tarihinin en teknik ve saygın dövüşçüsü olarak görülür.</td>
+        </tr>
+        <tr>
+            <td class="athlete-name">Terry Fox</td>
+            <td>Ultra Maraton</td>
+            <td>Kanser araştırmaları için protez bacağıyla Kanada'yı koşarak geçtiği "Umut Maratonu" ile küresel bir kahraman.</td>
+        </tr>
+    </tbody>
+</table>
+
+            <img style="width: 560px; height: 350px; margin-right: 20px; margin-bottom: 5px; border-radius: 5px;" alt="Wayne Gretzky" src="images/Wayne-Gretzky.jpg">
+            <img style="width: 580px; height: 355px; border-radius: 5px;" alt="Shai Gilgeous Alexander" src="images/Shai-Gilgeous-Alexander.jpg">
+            <img style="width: 560px; height: 350px; margin-right: 20px; margin-bottom: 5px;  border-radius: 5px;" alt="Summer McIntosh" src="images/Summer-McIntosh.jpg">
+            <img style="width: 580px; height: 350px; border-radius: 5px;" alt="Alphonso Davies" src="images/Alphonso-Davies.jpg">
+      </div>
+            
+      <div class="spor-card">
+        <h2>Kanada'nın En Büyük ve İkonik Stadyumları</h2>
+       <!--<div class="spor-baslik">Commonwealth Stadium</div>
+        <p style="font-size: 20px;"><strong>Commonwealth Stadium</strong><br><br>
+            <strong>• Temel Bilgiler ve Kapasite</strong>
+•        
+        </p>--> 
+        <table>
+    <thead>
+        <tr>
+            <th>Stadyum Adı</th>
+            <th>Şehir</th>
+            <th>Kapasite</th>
+            <th>Ev Sahibi / Branş</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="highlight">Commonwealth Stadium</td>
+            <td>Edmonton</td>
+            <td>56,302</td>
+            <td>Edmonton Elks (Kanada Futbolu / CFL)</td>
+        </tr>
+        <tr>
+            <td class="highlight">Olympic Stadium</td>
+            <td>Montreal</td>
+            <td>56,040</td>
+            <td>Çok Amaçlı (1976 Olimpiyatları Mirası)</td>
+        </tr>
+        <tr class="worldcup">
+            <td class="highlight">BC Place</td>
+            <td>Vancouver</td>
+            <td>54,500</td>
+            <td>Whitecaps (MLS) / <b>2026 Dünya Kupası Hostu</b></td>
+        </tr>
+        <tr>
+            <td class="highlight">Rogers Centre</td>
+            <td>Toronto</td>
+            <td>39,150</td>
+            <td>Toronto Blue Jays (Beyzbol / MLB)</td>
+        </tr>
+        <tr class="worldcup">
+            <td class="highlight">BMO Field</td>
+            <td>Toronto</td>
+            <td>30,000*</td>
+            <td>Toronto FC (MLS) / <b>2026 Dünya Kupası Hostu</b></td>
+        </tr>
+        <tr>
+            <td class="highlight">Mosaic Stadium</td>
+            <td>Regina</td>
+            <td>33,350</td>
+            <td>Saskatchewan Roughriders (CFL)</td>
+        </tr>
+    </tbody>
+</table>
+
+            <img style="width: 560px; height: 350px; margin-right: 20px; margin-bottom: 5px; border-radius: 5px;" alt="WCommonwealth Stadium" src="images/Commonwealth-Stadium.jpg">
+            <img style="width: 580px; height: 355px; border-radius: 5px;" alt="Olympic-Stadium" src="images/Olympic-Stadium.jpg">
+            <img style="width: 560px; height: 350px; margin-right: 20px; margin-bottom: 5px;  border-radius: 5px;" alt="BC Place" src="images/BC-Place.jpg">
+            <img style="width: 580px; height: 350px; border-radius: 5px;" alt="Rogers Centre" src="images/Rogers-Centre.jpg">
+      </div>
+
+
+ <footer>
+        <p>&copy; 2025 - Kanada Tanıtım</p>
+    </footer>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑ Yukarı</button>
+
+    <script>
+        window.onscroll = function() {
+            const btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+    </main>
+</body>

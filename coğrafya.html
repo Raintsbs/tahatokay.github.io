@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <title>Kanada Coğrafya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #dc0c0c;
+            position: relative;
+            height: 140px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding: 20px 80px;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: normal;
+            position: relative;
+            padding-right: 35px;
+        }
+        .maple-leaf {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+         main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #ff0000;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 5px;
+        }
+        .cografya-card {
+            height: 510px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .cografya-baslik{
+            color: #c41e3a;
+            margin-bottom: 12px;
+            font-size: 22px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+        .cografya-img{
+            height: 400px;
+            width: 400px;
+            border-radius: 5px;
+        }
+        .cografya-text{
+            height:120px;
+            width: 400px;
+            font-size: 20px;
+            display: inline-block;
+        }
+        .cografya-text2{
+            height:120px;
+            width: 400px;
+            font-size: 20px;
+            display: inline-block;
+        }
+        .cografya-text3{
+            height: 120px;
+            width: 350px;
+            font-size: 20px;
+            text-align: left;
+            display: inline-block;
+        }
+        .cografya-card2 {
+            height: 558px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .cografya-card3 {
+            height: 575px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #0056b3;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+            font-weight: bold;
+        }
+        .main-feature {
+            font-weight: bold;
+            color: #008080; 
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f8ff;
+            margin-top: 20px;
+        }
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            background-color: #ff0000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        #scrollTopBtn:hover {
+            background-color: #cc0000;
+            box-shadow: 0 6px 8px rgba(0,0,0,0.4);
+        }
+        #scrollTopBtn:active {
+            transform: scale(0.95);
+        }
+        
+  </style>
+</head>       
+<body>
+    <header>
+        <h1>Kanada'ya Hoş Geldiniz <span class="maple-leaf">🍁</span></h1>
+    </header>
+    
+    <nav>
+        <a href="code (1).html">Genel Bilgiler</a>
+        <a href="tarih.html">Tarihçe</a>
+        <a href="Kültür.html">Kültür</a>
+        <a href="mutfak.html">Mutfak</a>
+        <a href="turizm.html">Turizm</a>
+        <a href="#">Coğrafya</a>
+        <a href="ekonomi.html">Ekonomi</a>
+        <a href="spor.html">Spor</a>
+    </nav>
+
+    <main>
+        <section id="cografya">
+            <h2>Coğrafya</h2>
+
+            <div class="cografya-card">
+                <div class="cografya-baslik">Kanada Dağları</div>
+                <img style="width: 385px; height: 262px; border-radius: 5px;" alt="Kanada Kayalık Dağları" src="images/Kanada-Kayalık-Dağları.jpg">
+                <img style="width: 385px; height: 262px; border-radius: 5px;" alt="Logan Dağı" src="images/Logan-Dağı.jpg">
+                <img style="width: 385px; height: 262px; border-radius: 5px;" alt="Logan Dağı" src="images/Apalaş-dağları.jpg">
+                <p class="cografya-text"><strong>Kanada Kayalık Dağları:</strong> Ülkenin batı kıyısına paralel uzanan<br> en önemli sıradağlardır.
+                 Buzullar, karla<br> kaplı zirveler (özellikle Robson Dağı<br> ve Logan Dağı), derin vadiler ve ünlü ulusal<br> parklara (Banff, Jasper) ev sahipliği yapar.</p>
+                 <p class="cografya-text2"><strong>Logan Dağı:</strong> Kanada'daki en yüksek ve Kuzey Amerika'da Denali'den sonra en yüksek ikinci dağdır.<br> Dağ adını Kanadalı bir jeolist olan William Edmond Logan'dan almıştır.<br> Kluane Ulusal Parkı'nda yer alır.</p>
+                 <p class="cografya-text3"><strong>Apalaş Dağları:</strong> Dağların en önemli kısmı Amerika Birleşik Devletleri'nde bulunur ama küçük bir kısmı Kanada'dadır.Ülkenin doğusunda (Maritimes güneyi) uzanan daha alçak ve eski sıradağlardır.</p>
+            </div>
+             <div class="cografya-card">
+                <div class="cografya-baslik">Nehirler ve Su Yolları</div>
+                <img style="width: 385px; height: 262px; border-radius: 5px;" alt="Mackenzie Nehri" src="images/Mackenzie-Nehri.jpg">
+                <img style="width: 385px; height: 262px; border-radius: 5px;" alt="St. Lawrence Nehri" src="images/St.-Lawrence-Nehri.jpg">
+                <img style="width: 385px; height: 262px; border-radius: 5px;" alt="Yukon Nehri" src="images/Yukon-Nehri.jpg">
+                <p class="cografya-text"><strong>Mackenzie Nehri:</strong> 4.241 km uzunluğuyla Kanada'nın en uzun nehridir. Kuzeybatı<br>  Toprakları'ndan Arktik Okyanusu'na akar.
+                Nehir, Kanada'daki Büyük Slava Gölü'nden doğar ve kuzeye doğru akaçlanır.Geçtiği yerdeki iklim ve bitki örtüsü genelde iğne yapraklı ormanlar veya buzullardan ibarettir. Önceden adı "Disappointment Nehri"dir.</p>
+                 <p class="cografya-text2"><strong>St. Lawrence Nehri:</strong> Kanada ekonomisi ve tarihi için kritik öneme sahiptir.<br> Büyük Göller'den başlayıp Atlantik Okyanusu'na dökülür ve Québec ile Ontario'daki büyük şehirlere (Montréal, Québec Şehri) deniz yolu sağlar.<br> Nehir, Büyük Göller'i Atlas Okyanusu'na bağlar. </p>
+                 <p class="cografya-text3"><strong>Yukon Nehri:</strong> Klondike Altına Hücum döneminde büyük rol oynamış, Yukon bölgesinden geçen önemli bir nehirdir. Kuzey Amerika'nın kuzeybatısındaki en önemli su yollarından biri olan nehirdir ve Amerika Birleşik Devletlerine bağlı Alaska eyaleti ile Kanada'da bulunur. Yukon Nehri'den büyük nehir Tanana.</p>
+            </div>
+
+            <div class="cografya-card2">
+                <div class="cografya-baslik">Vadiler</div>
+                <img style="width: 385px; height: 262px; border-radius: 5px;" alt="Fraser Vadisi" src="images/Fraser-Vadisi.jpg">
+                <img style="width: 385px; height: 262px; border-radius: 5px;" alt="Okanagan Vadisi" src="images/Okanagan-Vadisi.jpg">
+                <img style="width: 385px; height: 262px; border-radius: 5px;" alt="Bow Vadisi" src="images/Bow-Vadisi.jpg">
+                <p class="cografya-text"><strong>Fraser Vadisi:</strong> British Columbia eyaleti, Vancouver'ın doğusu. Eyaletin en önemli tarım ve yerleşim bölgelerinden biridir. Batıda Büyük Vancouver Bölgesi'nden başlar ve doğuya doğru uzanır. Bölge, büyük Fraser Nehri tarafından şekillendirilmiştir ve zengin tarım arazilerine sahiptir.
+                Nüfus yoğunluğu ve tarımsal üretim (özellikle meyve, sebze ve süt ürünleri) açısından British Columbia ekonomisi için hayati önem taşır.</p>
+                 <p class="cografya-text2"><strong>Okanagan Vadisi:</strong> British Columbia eyaleti, güney-merkez bölge. Okanagan Ülkesi olarak da bilinir. Kuzeyde Vernon'dan güneyde Osoyoos'a kadar uzanan, uzun ve dar bir vadidir. Bölge, ılıman iklimi ve Okanagan Gölü'nün etkileyici manzarasıyla tanınır.
+                Kanada'nın önde gelen şarap üretim bölgelerinden biridir. Ayrıca kiraz, elma ve şeftali gibi meyve bahçeleriyle ve turizm (göl kenarı tatil beldeleri) ile popülerdir.</p>
+                <p class="cografya-text3"><strong>Bow Vadisi:</strong> Alberta eyaleti, Kanada Kayalık Dağları. Banff ve Canmore kasabalarına ev sahipliği yapan ve Bow Nehri boyunca uzanan, yüksek dağlarla çevrili dramatik bir vadidir.
+               Banff Ulusal Parkı'nın ana girişi ve kalbidir. Lake Louise'e giden ana rotayı oluşturur. Dağcılık, yürüyüş ve kış sporları için popülerdir. Rocky Dağının en etkileyici manzarasını sunar.</p>
+            </div>
+
+            <div class="cografya-card3">
+                <div class="cografya-baslik">Göller</div>
+                <img style="width: 385px; height: 262px; border-radius: 5px;" alt="Superior Gölü" src="images/Superior-Gölü.jpg">
+                <img style="width: 385px; height: 262px; border-radius: 5px;" alt="Büyük Ayı Gölü" src="images/Büyük-Ayı-Gölü.jpg">
+                <img style="width: 385px; height: 262px; border-radius: 5px;" alt="Büyük Esir Gölü" src="images/Büyük-Esir-Gölü.jpg">
+                 <p class="cografya-text"><strong>Fraser Vadisi:</strong> Yüzey alanı bazında dünyanın en büyük tatlı su gölüdür. Kanada (Ontario) ve Amerika Birleşik Devletleri arasında yer alır. Kıyıları, sert kayalıklar, derin ormanlar ve tarihi bakır madenciliği bölgeleriyle karakterizedir. 
+                Gölün devasa boyutu, çevresindeki bölgelerin iklimini etkileyerek, kış aylarında "Göl Etkili Kar Yağışı" (Lake Effect Snow) oluşumuna neden olur.<br><br></p>
+                 <p class="cografya-text2"><strong>Okanagan Vadisi:</strong> British Columbia eyaleti, güney-merkez bölge. Okanagan Ülkesi olarak da bilinir. Kuzeyde Vernon'dan güneyde Osoyoos'a kadar uzanan, uzun ve dar bir vadidir. Bölge, ılıman iklimi ve Okanagan Gölü'nün etkileyici manzarasıyla tanınır.
+                Kanada'nın önde gelen şarap üretim bölgelerinden biridir. Ayrıca kiraz, elma ve şeftali gibi meyve bahçeleriyle ve turizm (göl kenarı tatil beldeleri) ile popülerdir.<br><br></p>
+                <p class="cografya-text3"><strong>Büyük Esir Gölü:</strong> Alberta eyaleti, Kanada Kayalık Dağları. Banff ve Canmore kasabalarına ev sahipliği yapan ve Bow Nehri boyunca uzanan, yüksek dağlarla çevrili dramatik bir vadidir.
+               Banff Ulusal Parkı'nın ana girişi ve kalbidir. Lake Louise'e giden ana rotayı oluşturur. Dağcılık, yürüyüş ve kış sporları için popülerdir. Yöre halkı  ticari balıkçılık için hayati bir su kaynağıdır.</p>
+            </div>
+
+            <h2>🌡️ Kanada'nın Bölgesel İklim Özellikleri</h2>
+    <table>
+        <caption>Ana İklim Bölgelerine Göre Ort. Sıcaklık ve Yağış Bilgileri</caption>
+        <thead>
+            <tr>
+                <th>Bölge</th>
+                <th>Örnek Şehir</th>
+                <th>Yıllık Ortalama Yağış (mm)</th>
+                <th>Yaz Ort. Sıcaklığı (Temmuz)</th>
+                <th>Kış Ort. Sıcaklığı (Ocak)</th>
+                <th>Ana İklim Özelliği</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Pasifik Kıyısı</th>
+                <td>Vancouver (British Columbia)</td>
+                <td>1,150 mm</td>
+                <td>18°C</td>
+                <td>4°C</td>
+                <td class="main-feature">Ilıman Yağışlı (Kışlar ılık ve çok yağışlıdır).</td>
+            </tr>
+            <tr>
+                <th>İç Ovalar (Karasal)</th>
+                <td>Winnipeg (Manitoba)</td>
+                <td>500 mm</td>
+                <td>20°C</td>
+                <td>-16°C</td>
+                <td class="main-feature">Ekstrem Karasal (Yazlar sıcak, kışlar dondurucudur).</td>
+            </tr>
+            <tr>
+                <th>Büyük Göller & Doğu</th>
+                <td>Toronto (Ontario)</td>
+                <td>800 mm</td>
+                <td>22°C</td>
+                <td>-4°C</td>
+                <td class="main-feature">Nemli Karasal (Dört mevsim belirgin, ılıman yazlar ve soğuk kışlar).</td>
+            </tr>
+            <tr>
+                <th>Atlantik Kıyısı</th>
+                <td>Halifax (Nova Scotia)</td>
+                <td>1,500 mm</td>
+                <td>19°C</td>
+                <td>-4°C</td>
+                <td class="main-feature">Deniz Etkili (Yüksek yağış, iç bölgelere göre daha ılıman kışlar).</td>
+            </tr>
+            <tr>
+                <th>Arktik Kuzey</th>
+                <td>Iqaluit (Nunavut)</td>
+                <td>400 mm</td>
+                <td>8°C</td>
+                <td>-27°C</td>
+                <td class="main-feature">Kutup İklimi (Yılın çoğu sıfırın altında, düşük yağış, Permafrost).</td>
+            </tr>
+        </tbody>
+    </table>
+    <img style="height: 200px; width: 397px; border-radius: 5px;" alt="Atlantik Kıyısı" src="images/atlantik-kıyısı-mevsim.jpeg">
+    <img style="height: 200px; width: 397px; border-radius: 5px;" alt="Atlantik Kıyısı" src="images/iç-ovalar.jpeg">
+        <img style="height: 200px; width: 397px; border-radius: 5px;" alt="Ilıman Yaz" src="images/yağmur.jpeg">
+
+        
+        </section>
+    </main>
+
+     <footer>
+        <p>&copy; 2025 - Kanada Tanıtım</p>
+    </footer>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑ Yukarı</button>
+
+    <script>
+        window.onscroll = function() {
+            const btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</body>
+
+

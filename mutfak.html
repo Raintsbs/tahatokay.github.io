@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <title>Kanada Mutfağı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background-color: #dc0c0c;
+            position: relative;
+            height: 140px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding: 20px 80px;
+        }
+        header h1 {
+            color: white;
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: normal;
+            position: relative;
+            padding-right: 35px;
+        }
+        .maple-leaf {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+        }
+        nav {
+            background-color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #ff0000;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 5px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+      
+        .mutfak-card img {
+            height: 380px;
+            float: left;
+            margin: 0 20px 10px 0;
+            width: 750px;
+            max-width: 45%;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .mutfak-card .yemek-img {
+            height: 270px;
+            
+        }
+
+        .mutfak-card .yemek-img2 {
+            height: 420px;
+            
+        }
+
+        .mutfak-card::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f8ff;
+            margin-top: 20px;
+        }
+
+        .mutfak-card {
+            height: 900px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .mutfak-card2 {
+            height: 730px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+         .mutfak-card2 img {
+            height: 380px;
+            float: left;
+            margin: 0 20px 10px 0;
+            width: 750px;
+            max-width: 45%;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .mutfak-card2 .yemek-img {
+            height: 270px;
+            
+        }
+        
+        .mutfak-card3 {
+            height: 920px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .mutfak-card3 img {
+            height: 380px;
+            float: left;
+            margin: 0 20px 10px 0;
+            width: 750px;
+            max-width: 45%;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .mutfak-card3 .yemek-img3 {
+            height: 450px;
+            
+        }
+
+        .mutfak-card2 .yemek-img4 {
+            height: 650px;
+        }
+
+        .mutfak-card4 {
+            height: 985px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .mutfak-card4 img {
+            height: 380px;
+            float: left;
+            margin: 0 20px 10px 0;
+            width: 750px;
+            max-width: 45%;
+            display: block;
+            border-radius: 5px;
+        }
+        .mutfak-baslik {
+            color: #c41e3a;
+            margin-bottom: 12px;
+            font-size: 22px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+        }
+
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            background-color: #ff0000;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        #scrollTopBtn:hover {
+            background-color: #cc0000;
+            box-shadow: 0 6px 8px rgba(0,0,0,0.4);
+        }
+        #scrollTopBtn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Kanada'ya Hoş Geldiniz <span class="maple-leaf">🍁</span></h1>
+    </header>
+    
+    <nav>
+        <a href="code (1).html">Genel Bilgiler</a>
+        <a href="tarih.html">Tarihçe</a>
+        <a href="Kültür.html">Kültür</a>
+        <a href="#">Mutfak</a>
+        <a href="turizm.html">Turizm</a>
+        <a href="coğrafya.html">Coğrafya</a>
+        <a href="ekonomi.html">Ekonomi</a>
+        <a
+    </nav>
+    
+    <main>
+        <section id="mutfak">
+            <h2>Kanada Mutfağı</h2>
+            
+
+            <div class="mutfak-card">
+                <h3 class="mutfak-baslik">Poutine</h3>
+                <img class="media-left" alt="Poutine" src="images/Poutine.jpg">
+                <h3 style="color: red;">  Malzemeler  </h3>
+                <p style="font-size: 20px;">• 6-8 patates, soyulmuş<br>
+                • 1 yemek kaşığı bitkisel yağ, ayrıca kızartmak için daha fazlası<br>
+                • 1 arpacık soğanı, kıyılmış<br>
+                • 1 küçük diş sarımsak, kıyılmış<br>
+                • 460 ml tavuk suyu<br>
+                • 460 ml et suyu<br>
+                • 2 yemek kaşığı ketçap<br>
+                • 1 yemek kaşığı elma sirkesi<br>
+                • 1/2 çay kaşığı Worcestershire sosu<br>
+                • 2 yemek kaşığı un<br>
+                • 1 tatlı kaşığı tane karabiber<br>
+                • Tuz ve taze çekilmiş karabiber<br>
+                • 1 su bardağı çedar peyniri<br>
+                • 1 su bardağı lor peyniri
+                </p>
+               <h2 style="color: red;">  Yapılışı  </h2>
+               <p style="font-size: 18px;">1.Patatesleri uzunlamasına, çubuklar halinde kesin. Soğuk su dolu bir kasede nişastasını salması için en az 1 saat bekletin.<br> <br> 
+               2.Patatesleri süzün ve iyice kurulayın.<br><br>
+               3.Sosu yaparak başlayın. Sıvıyağı tencerede orta ateşte ısıtın. Arpacık soğan ve sarımsağı kavurun. Tavuk suyu, et suyu, ketçap, sirke, karabiber ve worcestershire sosu ekleyin ve kaynatın.<br><br>
+               4.Bu arada ayrı bir tencerede tereyağını eritin ve unu ekleyerek hafifçe renk alana, kokusu çıkana kadar kavurun. Sos karışımının içine çırparak ekleyin ve 20 dakika pişirin. <br><br>
+               5.Sosu tuz ve karabiber ile tatlandırarak sıcak kalmasını sağlayın.<br><br>
+               6.Bir tepsiye çift kat kağıt havlu serin. Derin bir kızartma tavasına yağı alarak 180 derecede ısınmasını bekleyin. Patatesleri birkaç part halinde altın rengi olana kadar kızartın. Kızaran patatesleri kağıt havlu üzerine çıkarın.<br><br>
+               7.Patatesler daha sıcakken tuz ve istenilen baharat ile baharatlayın.<br><br>
+               8.Sosu süzün, patateslerin üzerine sosu ve peynirleri gezdirerek sıcakken servis edin. Afiyet olsun. 
+<br>
+            </p>
+                <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/auUiA7755Mo?si=IpCsXJkEVu8qFZD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
+                <div style="clear: both;"></div>
+            </div>
+
+            <div class="mutfak-card2">
+            <h3 class="mutfak-baslik">Montreal Smoked Meat</h3>
+            <img class="yemek-img" alt="Montreal Smoked Meat" src="images/Kanada-Ekmeği-(Bannock).jpg">
+            <h3 style="color: red;">  Malzemeler  </h3>
+            <p style="font-size: 20px;">
+                • 1 su bardağı buğday unu<br>
+                • ½ su bardağı çok amaçlı un<br>
+                • ½ su bardağı yulaf ezmesi<br>
+                • 2 çorba kaşığı toz şeker<br>
+                • 2 çay kaşığı kabartma tozu<br>
+                • ½  çay kaşığı tuz<br>
+                • 2 yemek kaşığı eritilmiş tereyağı<br>
+                • 1/3  su bardağı kuru üzüm (isteğe bağlı)<br>
+                • ¾ su bardağı su<br>
+                </p><br>
+
+                <h2 style="color: red;">  Yapılışı  </h2>
+                <p style="font-size: 18px;">
+               1.Bir kapta yulaf ezmesi, toz şeker, kabartma tozu, tuz ve unu karıştırıyoruz.<br> <br> 
+               2.Eritilmiş tereyağını, üzüm ve suyu ilave ediyoruz.<br><br>
+               3.Un kıvamına gelmezse biraz daha su ekleyebiliriz.<br><br>
+               4.Hamura şekil vermek için ellerimizi unluyoruz ardından hamuru yağlanmış tepsiye koyuyoruz.<br><br>
+               5.200 derece fırında 20-25 dakika kadar pişiriyoruz.<br><br>
+               6.Kenarları temizleyip yuvarlak şekilde kestikten sonra servis ediyoruz.<br><br>
+                Afiyet olsun!
+                </p>   
+            </div>
+
+            <div class="mutfak-card">
+             <h3 class="mutfak-baslik"> Tereyağlı tartlar</h3>
+             <img  class="media-left" alt="Tereyağlı tartlar" src="images/Tereyağlı-tartlar.jpg">
+              <h3 style="color: red;">  Malzemeler  </h3>
+            <p style="font-size: 20px;">
+                • 12 adet muffin kalıbına sığacak şekilde kesilmiş tart hamuru yuvarlakları.<br></p>
+            <h3 style="color: red;">  İç Dolgusu İçin  </h3>
+                <p style="font-size: 20px;">
+                • 1/2 su bardağı (yaklaşık 115g) tereyağı (eritilmiş ve ılımış)<br>
+                • 1 su bardağı esmer şeker (lezzetin sırrı budur, beyaz şeker aynı sonucu vermez)<br>
+                • 1 adet büyük boy yumurta (hafifçe çırpılmış)<br>
+                • 2 yemek kaşığı süt veya krema<br>
+                • 1 çay kaşığı vanilya özü<br>
+                • 1 tatlı kaşığı beyaz sirke veya limon suyu (tatlılığı dengelemek için çok önemlidir)<br>
+                </p><br>    
+
+                 <h2 style="color: red;">  Yapılışı  </h2>
+                <p style="font-size: 18px;">
+                  1.Fırınınızı önceden 190°C'ye (alt-üst ayar) ısıtın. 12'li bir muffin tepsisini hafifçe yağlayın.<br><br>
+                  2.Hazırladığınız veya satın aldığınız tart hamuru yuvarlaklarını muffin kalıplarına nazikçe yerleştirin, kenarlarını hafifçe bastırarak şekil verin. Buzdolabında bekletin.<br><br>
+                  3.Eğer kuru üzüm veya ceviz kullanacaksanız, bunları tart hamurlarının tabanına paylaştırın.<br><br>
+                  4.Orta boy bir kapta eritilmiş tereyağı ve esmer şekeri pürüzsüz olana kadar karıştırın. İçine çırpılmış yumurtayı, sütü (veya kremayı), vanilyayı ve sirkeyi (veya limon suyunu) ekleyin. Tüm malzemeler birleşene kadar karıştırın, ancak çok fazla köpürtmeyin (fazla hava kabarmasına ve çökmesine neden olur).<br><br>
+                  5.Hazırladığınız dolguyu tart kalıplarına paylaştırın. Kalıpları yaklaşık 2/3 oranında doldurun. Çok doldurursanız pişerken taşıp yapışabilir.<br><br>
+                  6.Önceden ısıtılmış fırında yaklaşık 15-20 dakika pişirin.<br><br>
+                  7.Tartları fırından çıkarın. Tepsiden çıkarmadan önce en az 15 dakika tepsi içinde soğumalarını bekleyin. Sıcakken çıkarmaya çalışırsanız dağılırlar.<br><br>
+                  8.Ilık veya oda sıcaklığında servis yapabilirsiniz. Afiyet olsun!
+                </p>
+                </div>
+
+                <div class="mutfak-card3"> 
+                    <h3 class="mutfak-baslik">Saskatoon Meyveli Turta</h3>
+                    <img  class="media-left" alt="Saskatoon Meyveli Turta" src="images/Saskatoon-Meyveli-Turta.jpg">
+                    <h3 style="color: red;">  Malzemeler  </h3>
+                    <p style="font-size: 20px;"> 
+                        • 2 adet hazır turta/tart hamuru (biri alt, biri üst için).<br><br>
+                        • 4-5 su bardağı saskatoon meyvesi (taze veya dondurulmuş*)<br><br>
+                        • 3/4 su bardağı toz şeker (meyvenin tatlılığına göre artırılabilir)<br><br>
+                        • 3 yemek kaşığı mısır nişastası (veya un) – kıvam vermesi için<br><br>
+                        • 1 yemek kaşığı limon suyu (lezzeti dengeler)<br><br>
+                        • 1 yemek kaşığı tereyağı (küçük parçalara ayrılmış)<br><br>
+                        • İsteğe bağlı: Yarım çay kaşığı badem özü veya tarçın.<br><br>
+                        • Üzeri için: 1 adet çırpılmış yumurta sarısı (parlaklık için).<br>
+                    </p>
+
+                    <h2 style="color: red;">  Yapılışı  </h2>
+                    <p style="font-size: 18px;">
+                        1.Fırınınızı önceden 200°C'ye (alt-üst ayarda) ayarlayın.<br><br>
+                        2.Büyük bir kasede saskatoon meyvelerini, şekeri, nişastayı, limon suyunu ve kullanıyorsanız aromayı (badem/tarçın) nazikçe karıştırın. Meyveler iyice kaplansın.<br><br>
+                        3.İlk turta hamurunu yağladığınız turta kalıbına yerleştirin.<br><br>
+                        4.Hazırladığınız meyveli harcı kalıba dökün ve eşitçe yayın. Üzerine küçük tereyağı parçalarını serpiştirin.<br><br>
+                        5.İkinci hamuru harcın üzerine kapatın. Kenarlarını parmaklarınızla veya bir çatalla bastırarak sıkıca yapıştırın.<br><br>
+                        6.Turtanın buharının çıkması için üst hamura bıçakla birkaç kesik atın. Fırça yardımıyla üzerine çırpılmış yumurta sarısını sürün.<br><br>
+                        7.Önce 200°C'de 15 dakika pişirin (bu alt tabanın kıtır olmasını sağlar).<br><br>
+                        8.Daha sonra fırın ısısını 175°C'ye düşürün ve üzeri altın sarısı olana kadar yaklaşık 35-45 dakika daha pişirin. (Kenarlar çok hızlı kızarırsa alüminyum folyo ile kapatabilirsiniz). <br><br>
+                        9.Fırından çıkardıktan sonra iç harcın kıvam alması için servis yapmadan önce en az 2 saat oda sıcaklığında soğumasını bekleyin.
+                    </p>
+                </div>
+
+                <div class="mutfak-card3">
+                    <h3 class="mutfak-baslik">Beavertails</h3>
+                    <img class="yemek-img3" alt="Beavertails" src="images/Beavertails.jpg">
+                    <h3 style="color: red;">  Malzemeler  </h3>
+                    <p style="font-size: 20px;">
+                        • 1/2 su bardağı ılık su<br>
+                        • 2 tatlı kaşığı aktif kuru maya (veya yarım paket yaş maya)<br>
+                        • 1/2 su bardağı ılık süt<br>
+                        • 1/3 su bardağı toz şeker<br>
+                        • 1 çay kaşığı tuz<br>
+                        • 1 adet yumurta<br>
+                        • 2 yemek kaşığı sıvı yağ (veya eritilmiş tereyağı)<br>
+                        • 3 - 3.5 su bardağı un (kıvama göre ayarlayın)
+                    <p>
+
+                    <h3 style="color: red;">  Kızartmak İçin  </h3>
+                    <p style="font-size: 20px;">
+                        • Derin bir tencerede ayçiçek yağı veya kanola yağı (yaklaşık 5-6 cm derinlikte).<br>
+                    </p>
+                    <h3 style="color: red;">  Klasik Üst Kaplama (En Gelenekseli):  </h3>
+                    <p style="font-size: 20px; ">
+                        • Toz şeker ve tarçın karışımı.<br>
+                        • Taze limon dilimleri (üzerine sıkmak için).
+                    </p>
+
+                    <h2 style="color: red;">  Yapılışı  </h2>
+                    <p style="font-size: 18px;">  
+                        1.Küçük bir kapta ılık su, 1 tatlı kaşığı şeker ve mayayı karıştırın. Köpürene kadar 5-10 dakika bekletin.<br><br>
+                        2.Büyük bir karıştırma kabında ılık sütü, kalan şekeri, tuzu, yumurtayı ve yağı çırpın. Mayalı karışımı ekleyin. Unu yavaş yavaş ekleyerek yoğurmaya başlayın. Ele hafifçe yapışan ama pürüzsüz, yumuşak bir hamur elde etmelisiniz.<br><br>
+                        3.Hamuru hafifçe yağlanmış bir kaba koyun, üzerini örtün ve ılık bir yerde hacmi iki katına çıkana kadar yaklaşık 1 saat mayalandırın.<br><br>
+                        4.Mayalanan hamuru hafifçe unlanmış tezgaha alın ve havasını indirin. Hamuru 8-10 eşit bezeye ayırın. Her bezeyi elinizle veya merdane yardımıyla, kunduz kuyruğuna benzeyen uzun, yassı ovaller şeklinde açın. (Çok ince olmasın, yaklaşık yarım cm kalınlık iyidir).<br><br>
+                        5.Yağı orta-yüksek ateşte ısıtın (yaklaşık 175°C). Hamurları dikkatlice sıcak yağa bırakın. Her iki tarafı da altın sarısı-kahverengi olana kadar, her yüzü yaklaşık 1-2 dakika kızartın.<br><br>
+                        6.Kızaran hamurları maşa ile alın, fazla yağını süzdürmek için kısa bir süre kağıt havlu üzerine koyun.<br><br>
+                        7.Hamur hala sıcakken hemen tarçınlı şeker karışımına bulayın (veya üzerine bolca serpin).
+                    </p>
+                </div>
+
+                <div class="mutfak-card2">  
+                     <h3 class="mutfak-baslik">Tire d’érable sur la neige</h3>
+                     <img class="yemek-img4" alt="Tire d’érable sur la neige" src="images/Tire-d’érable-sur-la-neige.jpg">
+                      <h3 style="color: red;">  Malzemeler  </h3>
+                          <p style="font-size: 20px;"> 
+                              • %100 Gerçek Akçaağaç Şurubu (Maple Syrup)<br>
+                              • Temiz Kar veya Buz<br>
+                              • Tahta Çubuklar<br>
+                              • Şeker Termometresi<br>   
+                        </p>
+
+                        <h2 style="color: red;">  Yapılışı  </h2>
+                        <p style="font-size: 18px;">  
+                           1.Temiz karı veya çektiğiniz buzu geniş bir tepsiye veya fırın kabına sıkıca bastırarak yerleştirin. Şurubu hazırlayana kadar dondurucuda veya soğuk bir balkonda bekletin (erimemeli).<br><br>
+                           2.Akçaağaç şurubunu yüksek kenarlı bir tencereye koyun (kaynarken köpürüp yükselir). Orta-yüksek ateşte kaynatmaya başlayın.<br><br>
+                           3.Şurubun içindeki suyun buharlaşıp şeker oranının artması, yani "macun" kıvamına gelmesi gerekir. Şeker termometresi ile ölçün. Şerbet 115°C'ye (yaklaşık 238-240°F) ulaştığında hemen ocaktan alın.<br><br>
+                           4.Eğer daha az ısıtırsanız: Şerbet karın içine akar gider, macunlaşmaz.<br><br>
+                           5.Eğer çok ısıtırsanız: Kaskatı şeker olur, dişe yapışır.<br><br>
+                           6.Sıcak şerbeti (çok dikkatli olun, çok sıcaktır!) hazırladığınız soğuk karın üzerine yaklaşık 10-15 cm uzunluğunda ince şeritler halinde dökün.<br><br>
+                           7.Şerbet soğuk karla temas ettiği an katılaşmaya başlayacaktır.<br><br>
+                           8.Yaklaşık 5-10 saniye bekleyin. Tahta çubuğu şeridin bir ucuna bastırın ve yuvarlayarak şerbeti çubuğa sarın.
+                        </p>
+                </div>
+
+                <div class="mutfak-card"> 
+                     <h3 class="mutfak-baslik">Pouding chômeur</h3>
+                     <img class="media-left" alt="Pouding chômeur" src="images/Pouding-chômeur.jpg">
+                     <h3 style="color: red;">  Malzemeler  </h3>   
+                        <p style="font-size: 20px;">
+                            • 1/2 su bardağı (115g) tereyağı (oda sıcaklığında)<br>
+                            • 1 su bardağı toz şeker<br>
+                            • 1 adet yumurta<br>
+                            • 1.5 su bardağı un<br>
+                            • 2 çay kaşığı kabartma tozu<br>
+                            • Yarım çay kaşığı tuz<br>
+                            • 1 su bardağı süt<br>
+                            • 1 çay kaşığı vanilya özü<br>
+                            • 1.5 su bardağı akçaağaç şurubu (%100 saf akçaağaç şurubu, aromasız)<br>
+                            • Yarım su bardağı su (veya süt/krema, daha zengin bir tat için)<br>
+                            • 2 yemek kaşığı tereyağı<br>
+                        </p> 
+                        <br><br>
+                        <h2 style="color: red;">  Yapılışı  </h2>
+                        <p style="font-size: 18px;">
+                            1.Fırınınızı önceden 175°C'ye (alt-üst ayarda) ısıtın. Orta büyüklükte bir fırın kabını (yaklaşık 20x30 cm veya 2 litrelik kapasitede) hafifçe yağlayın.<br><br>
+                            2.Büyük bir kapta oda sıcaklığındaki tereyağı ve şekeri mikserle kremsi bir kıvam alana kadar çırpın.<br><br>
+                            3.Yumurtayı ekleyin ve iyi karıştırın. <br><br>
+                            4.Unu, kabartma tozunu ve tuzu bir kaseye eleyerek karıştırın. Bunu tereyağı karışımına değişen şekilde ekleyin, sütü ve vanilyayı da dönüşümlü olarak ekleyin. Düzgün bir sos elde olana kadar karıştırın.<br><br>
+                            5.Hazırladığınız batteri (sos) fırın kabına dökün.<br><br>
+                            6.Ayrı bir tencerede akçaağaç şurubunu, suyu ve tereyağını birlikte ılıtın (kaynamasına gerek yok). Bu karışımı hazırladığınız baterinin üzerine yavaşça döküm (karıştırmayın!).<br><br>
+                            7.Fırında 45-55 dakika pişirin, üzeri ışıl ışıl altın sarısı olana kadar. Altta güzel bir karamel sos oluşacak.<br><br>
+                            8.Fırından çıkardıktan sonra 10-15 dakika soğumasını bekleyin. Şerbetli sos ile birlikte sıcak olarak servis edin. Afiyet olsun!
+                </div>
+
+                <div class="mutfak-card4">   
+                    <h3 class="mutfak-baslik">Sezar Kokteyli</h3>
+                     <img class="media-left" alt="Sezar Kokteyli" src="images/Sezar-Kokteyli.jpg">
+                      <h3 style="color: red;">  Malzemeler  </h3>   
+                        <p style="font-size: 20px;">
+                           • 1 yemek kaşığı limon suyu (veya misket limonu suyu)<br>• 1 yemek kaşığı limon suyu (veya misket limonu suyu)<br>
+                           • 2 yemek kaşığı Celery Salt (Kereviz Tuzu) – Bu çok önemlidir! Bulamazsanız, normal tuz ile karıştırılmış biraz kuru kereviz tozu kullanabilirsiniz.<br>
+                           • 1.5 oz (45 ml) Votka (tercihen iyi kalite)<br>
+                           • 4-6 oz (120-180 ml) Clamato Suyu (damak zevkinize göre ayarlayın)<br>
+                           • 2-3 damla Worcestershire Sosu (daha yoğun isterseniz artırabilirsiniz)<br>
+                           • 2-3 damla Acı Sos (Tabasco veya favori acı sosunuz)<br>
+                           • Bir tutam taze çekilmiş karabiber<br>
+                           • Buz<br>
+                           • 1 adet Kereviz Sapı (yapraklı ucuyla birlikte)<br>
+                           • 1 adet Limon veya Misket Limonu Dilimi<br>
+                           • 1 adet Limon veya Misket Limonu Dilimi<br>
+                     </p>
+
+                     <h2 style="color: red;">  Yapılışı  </h2>
+                        <p style="font-size: 18px;">
+                            1.Küçük bir tabağa kereviz tuzunu yayın.<br><br>
+                            2.Başka bir küçük tabağa limon/misket limonu suyunu dökün.<br><br>
+                            3.Bir highball (uzun) bardağın ağız kenarını önce limon suyuna batırın, ardından kereviz tuzuna bulayın.<br><br>
+                            4.Bardağın içine bolca buz doldurun.<br><br>
+                            5.Bardağın içine votkayı ekleyin.<br><br>
+                            6.Üzerine Clamato suyunu dökün.<br><br>
+                            7.Worcestershire sosunu, acı sosu ve karabiberi ekleyin.<br><br>
+                            8.Tüm malzemelerin iyice karışması için bir bar kaşığı ile nazikçe karıştırın.<br><br>
+                            9.Kereviz sapını ve limon/misket limonu dilimini bardağa yerleştirin.<br><br>
+                            10.Kullanıyorsanız diğer turşu garnitürlerini de ekleyin.<br><br>
+                            11.Hemen servis yapın ve Kanada'nın bu eşsiz lezzetinin tadını çıkarın!
+                        </p>
+                </div>
+                    
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 - Kanada Tanıtım</p>
+    </footer>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑ Yukarı</button>
+
+    <script>
+        window.onscroll = function() {
+            const btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</body>
+</html>
